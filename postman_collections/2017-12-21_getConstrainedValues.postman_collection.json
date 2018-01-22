@@ -1,0 +1,955 @@
+{
+	"info": {
+		"name": "2017/12/21 - Get Constrained Values with environment",
+		"_postman_id": "b9bb1329-8dd9-338a-3a89-843f0a3e92f2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HO3",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "service",
+							"value": "{{awsService}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "{{awsRegion}}",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "{{accessKey}}",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{rootURL}}/quotes/constrained-values?policyForm=HO3",
+					"host": [
+						"{{rootURL}}"
+					],
+					"path": [
+						"quotes",
+						"constrained-values"
+					],
+					"query": [
+						{
+							"key": "policyForm",
+							"value": "HO3",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "3c47a6eb-6b98-424e-8a5f-dc028e86c501",
+					"name": "HO3 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootURL}}/quotes/constrained-values?policyForm=HO3",
+							"host": [
+								"{{rootURL}}"
+							],
+							"path": [
+								"quotes",
+								"constrained-values"
+							],
+							"query": [
+								{
+									"key": "policyForm",
+									"value": "HO3",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "10175",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "connection",
+							"value": "keep-alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "date",
+							"value": "Thu, 21 Dec 2017 14:32:02 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"27bf-WVNwA7jzEw95v6R/iKTySzZbu+I\"",
+							"name": "etag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 1329,
+					"body": "{\"coverages\":{\"section1\":{\"aopDeductible\":[\"$500\",\"$1,000\",\"$2,500\",\"$5,000\"],\"hurricaneDeductible\":[\"$500\",\"2% of Coverage A\",\"5% of Coverage A\",\"10% of Coverage A\",\"Ex-Wind\"],\"coverageC\":{\"percentOfCoverageA\":[{\"percent\":0,\"string\":\"0% of Coverage A\"},{\"percent\":25,\"string\":\"25% of Coverage A\"},{\"percent\":30,\"string\":\"30% of Coverage A\"},{\"percent\":35,\"string\":\"35% of Coverage A\"},{\"percent\":40,\"string\":\"40% of Coverage A\"},{\"percent\":45,\"string\":\"45% of Coverage A\"},{\"percent\":50,\"string\":\"50% of Coverage A\"},{\"percent\":55,\"string\":\"55% of Coverage A\"},{\"percent\":60,\"string\":\"60% of Coverage A\"},{\"percent\":65,\"string\":\"65% of Coverage A\"},{\"percent\":70,\"string\":\"70% of Coverage A\"},{\"percent\":75,\"string\":\"75% of Coverage A\"}]}},\"section2\":{\"coverageE\":[\"$100,000\",\"$200,000\",\"$300,000\",\"$500,000\"]},\"optional\":{\"attachedEnclosureOrCarportLimit\":[\"$0\",\"$5,000\",\"$10,000\",\"$15,000\",\"$20,000\",\"$25,000\",\"$30,000\",\"$35,000\",\"$40,000\",\"$45,000\",\"$50,000\",\"$55,000\",\"$60,000\",\"$65,000\",\"$70,000\",\"$75,000\"]}},\"discounts\":{\"burglarAlarm\":[\"None\",\"Central Monitoring Station\",\"Police Station\"],\"fireAlarm\":[\"None\",\"Central Monitoring Station\",\"Fire Station\"],\"fireSprinkler\":[\"None\",\"Full\"],\"openingProtectionLevel\":[\"None\",\"Basic\",\"Hurricane\"],\"securedCommunity\":[\"No\",\"Single Entry or 24 hr Patrol\",\"24 hr Manned or Passkey Gates\",\"N/A\"]},\"insuranceType\":[\"SFI Florida HO3\"],\"priorCoverage\":{\"carrier\":[\"ACA Home Insurance Corp.\",\"ACE Insurance Company of the Midwest\",\"Addison Insurance Company\",\"Affiliated FM Insurance Company\",\"Allstate Insurance Company\",\"American Automobile Insurance Company\",\"American Bankers Insurance Company of Florida\",\"American Capital Assurance Corp.\",\"American Casualty Company of Reading, Pennsylvania\",\"American Home Assurance Company\",\"American Integrity Insurance Company of Florida\",\"American Mercury Insurance Company\",\"American Modern Insurance Company of Florida, Inc.\",\"American Platinum Property and Casualty Insurance Company\",\"American Reliable Insurance Company\",\"American Security Insurance Company\",\"American Southern Home Insurance Company\",\"American States Insurance Company\",\"American Strategic Insurance Corp.\",\"American Traditions Insurance Company\",\"Amica Mutual Insurance Company\",\"Ark Royal Insurance Company\",\"Armed Forces Insurance Exchange\",\"ASI Assurance Corp.\",\"ASI Preferred Insurance Corp.\",\"Associated Indemnity Corporation\",\"Auto Club Insurance Company of Florida\",\"Auto-Owners Insurance Company\",\"Avatar Property & Casualty Insurance Company\",\"Balboa Insurance Company\",\"Bankers Insurance Company\",\"Capitol Preferred Insurance Company, Inc.\",\"Castle Key Insurance Company\",\"Centauri Insurance\",\"Century National Insurance Company\",\"Charter Oak Fire Insurance Company\",\"Chartis Property Casualty Company\",\"Chubb\",\"Church Mutual Insurance Company\",\"Cincinnati Insurance Company\",\"Citizens Property Insurance Corporation\",\"Companion Property and Casualty Insurance Company\",\"Cooperativa De Seguros Multiples de Puerto Rico, Inc.\",\"Cotton States Mutual Insurance Company\",\"Cypress Property & Casualty Insurance Company\",\"Edison Insurance Company\",\"Electric Insurance Company\",\"Encompass Floridian Insurance Company\",\"Federal Insurance Company\",\"Federated National Insurance Company\",\"Fidelity Fire & Casualty Company\",\"Fidelity National Property and Casualty Insurance Company\",\"Fireman's Fund Insurance Company\",\"First American Property & Casualty Insurance Company\",\"First Community Insurance Company\",\"First Floridian Auto and Home Insurance Company\",\"First Home Insurance Company\",\"First Liberty Insurance Corporation (The)\",\"First National Insurance Company of America\",\"First Protective Insurance Company\",\"Florida Family Insurance Company\",\"Florida Farm Bureau Casualty Insurance Company\",\"Florida Peninsula Insurance Company\",\"Foremost Insurance Company\",\"Frontline Insurance Company\",\"Geo Vera\",\"Great Northern Insurance Company\",\"Guideone Elite Insurance Company\",\"Gulfstream Property and Casualty Insurance Company\",\"Hanover American Insurance Company (The)\",\"Hartford Fire Insurance Company\",\"Heritage Insurance Company\",\"Heritage Property & Casualty homeowners Choice Property & Casualty Insurance Company, Inc.\",\"Homesite Insurance Company of Florida\",\"Horace Mann Insurance Company\",\"IDS Property Casualty Insurance Company\",\"Lexington\",\"Liberty Mutual Fire Insurance Company\",\"Lloyds of London\",\"Markel Insurance Company\",\"Metropolitan Casualty Insurance Company\",\"Modern USA Insurance Company\",\"Nationwide Insurance Company of Florida\",\"New Hampshire Insurance Company\",\"Nova Casualty Company\",\"Ohio Casualty Insurance Company\",\"Old Dominion Insurance Company\",\"Olympus Insurance Company\",\"Omega Insurance Company\",\"People's Trust Insurance Company\",\"Prepared Insurance Company\",\"Privilege Underwriters Reciprocal Exchange\",\"Protection and Indemnity\",\"Ranchers and Farmers Insurance Company\",\"Safe Harbor Insurance Company\",\"SAFECO Insurance Company of America\",\"Safepoint Insurance Company\",\"Safeway Property Insurance Company\",\"Sawgrass Mutual Insurance Company\",\"Security First Insurance Company\",\"Service Insurance Company\",\"Shield Insurance Company\",\"Southern Fidelity Insurance Company\",\"Southern Fidelity Property & Casualty, Inc.\",\"Southern Oak Insurance Company\",\"Southern-Owners Insurance Company\",\"Specialty Insurance Company\",\"St. Johns Insurance Company, Inc.\",\"Star & Shield Insurance Exchange\",\"State Farm Florida Insurance Company\",\"Sunshine State Insurance Company\",\"Teachers Insurance Company\",\"Tower Hill Prime Insurance Company\",\"Transportation Insurance Company\",\"Travelers Indemnity Company of America\",\"United Casualty Insurance Company of America\",\"United Fire and Casualty Company\",\"United Property & Casualty Insurance Company, Inc.\",\"United Services Automobile Association\",\"Universal Insurance Company of North America\",\"Universal Property & Casualty Insurance Company\",\"USAA Casualty Insurance Company\",\"Vigilant Insurance Company\",\"Westfield Insurance Company\",\"Weston\",\"Other\"]},\"priorLosses\":{\"type\":[\"Aircraft\",\"All Other - Act of God\",\"All Other - Non Act of God\",\"Automobile\",\"Bodily Injury - All Other\",\"Bodily Injury - Animal Liability\",\"Bodily Injury - Golf Cart\",\"Bodily Injury - Injury to Tenant\",\"Bodily Injury - Motor Vehicle\",\"Bodily Injury - Off Premises\",\"Bodily Injury - On Premises\",\"Bodily Injury - Pollution\",\"Bodily Injury - Pollution - Mold\",\"Bodily Injury - Pool\",\"Bodily Injury - Slip/Fall\",\"Bodily Injury - Trampoline\",\"Bodily Injury - Watercraft\",\"Burglary\",\"Catastrophic Ground Collapse\",\"Collapse - Non Act of God\",\"Collapse - Other Act of God\",\"Credit Card Loss\",\"Earth Movement\",\"Earthquake\",\"Erroneous\",\"Explosion - Other\",\"Falling Objects\",\"Falling Trees\",\"Fire - All Other\",\"Fire - Caused By Candle\",\"Fire - Caused By Wildfire\",\"Fire - Cooking\",\"Fire - Electrical\",\"Fire - Fire Place\",\"Fire - Kitchen\",\"Fire - Lightning\",\"Fire - Caused  by Smoking (Building)\",\"Fire - Caused  by Smoking (Contents)\",\"Flood\",\"Food Spoilage\",\"Freezing\",\"Freezing - Ice Damage\",\"Golf Cart Physical Damage - Collision\",\"Golf Cart Physical Damage - Other\",\"Hail\",\"Hail Loss/ Roof-Only-Building\",\"Identity Theft\",\"Liability - Personal Injury - Advertising\",\"Liability - Personal Injury - False Arrest or Imprisonment\",\"Liability - Personal Injury - Libel\",\"Liability - Personal Injury - Malicious Prosecution\",\"Liability - Personal Injury - Slander\",\"Lightning\",\"Loss Assessment - Act of God\",\"Loss Assessment - Non Act of God\",\"Med Pay - All other\",\"Med Pay - Animal Liability\",\"Med Pay - Golf Cart\",\"Med Pay - Injury to Tenant\",\"Med Pay - Motor Vehicle\",\"Med Pay - Pollution\",\"Med Pay - Pollution - Mold\",\"Med Pay - Pool\",\"Med Pay - Slip & Fall\",\"Med Pay - Trampoline\",\"Med Pay - Watercraft\",\"Mold\",\"Mysterious Disappearance\",\"PD - Act of Child\",\"PD - All Other\",\"PD - Caused by Animal\",\"PD - Motor Vehicle\",\"PD - Pollution\",\"PD - Pollution - Mold\",\"PD - Water Leak\",\"PD - Watercraft\",\"Pollution\",\"Power Surge\",\"Residential Glass\",\"Riot - Civil Commotion\",\"Sinkhole Damage\",\"Smoke\",\"Theft From Auto\",\"Theft Off Premises\",\"Theft On Premises\",\"Vandalism & M.M.\",\"VMM - Looting\",\"Water - Accidental Discharge\",\"Water - All Other\",\"Water - Backup Sewer or Drains\",\"Water - Caused by Appliances\",\"Water - Foundation\",\"Water - Plumbing Leakage or Break\",\"Water - Roof Leak\",\"Water - Seeping though windows or walls\",\"Water - Solar Panels\",\"Water - Sprinkler Leakage\",\"Wind - Hurricane\",\"Wind - Other\",\"Wind - Tornado\",\"Wind - Tropical Storm\"]},\"propertyDetails\":{\"constructionType\":[\"Masonry 100%\",\"Frame 100%\",\"Superior\",\"Mixed Masonry (25% or Less Frame)\",\"Mixed Masonry (26% or More Frame)\"],\"numStories\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"],\"numUnitsInBuilding\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"occupancyAndUsage\":[{\"occupancy\":\"Owner Occupied\",\"usage\":[\"Primary Residence, Not Rented\",\"Secondary Residence, Not Rented\"]},{\"occupancy\":\"Immediate Family\",\"usage\":[\"N/A\"]},{\"occupancy\":\"Seasonal\",\"usage\":[\"Seasonal Residence, Not Rented\"]},{\"occupancy\":\"Secondary\",\"usage\":[\"Secondary Residence, Not Rented\"]}],\"plumbingPipeMaterial\":[\"PVC/CPVC/PE/PEX\",\"Copper\",\"Polybutylene\",\"Galvanized Steel\",\"Not Listed\"],\"poolType\":[\"In Ground\",\"Above Ground\"],\"roofDetails\":{\"cover\":[\"Non FBC Equivalent\",\"FBC Equivalent\",\"Reinforced Concrete Roof Deck\"],\"deckAttachment\":[\"A - 6d @ 6\\\" / 12\\\"\",\"B - 8d @ 6\\\" / 12\\\"\",\"C - 8d @ 6\\\" / 6\\\"\",\"Reinforced Concrete\",\"Unknown\"],\"material\":[\"Shingles: Asphalt or Composition\",\"Shingles: Wood or Wood Shake\",\"Shingles: Metal\",\"Shingles: Solar\",\"Tile: Flat Slate\",\"Tile: Flat Concrete, Clay or Composite\",\"Tile: S Curve Concrete, Clay or Composite\",\"Tile: Flat Metal\",\"Metal: Light Panels Slate\",\"Metal: Standing Seam\",\"Built-up: Not Ballasted\",\"Built-up: Roof Ballasted\",\"Built-up: Single Ply membrane - Not ballasted/stabilized\",\"Built-up: Single Ply membrane - Ballasted\",\"Built-up: Concrete Fill\",\"Thermoplastic Polyolefin\",\"Other\",\"Asbestos\"],\"shape\":[\"Flat\",\"Gable\",\"Hip\",\"Other\"],\"wallAttachment\":[\"Toe Nails\",\"Clips\",\"Single Wraps\",\"Double Wraps\",\"Unknown\"]},\"secondaryWaterResistance\":[\"Yes\",\"No\",\"Unknown\"],\"structureType\":[\"Single Family House\",\"Single Family Modular\",\"Mobile/Manufactured/Park Model/RV\",\"Townhouse\",\"Duplex\"]}}"
+				}
+			]
+		},
+		{
+			"name": "HO4",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "service",
+							"value": "{{awsService}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "{{awsRegion}}",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "{{accessKey}}",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{rootURL}}/quotes/constrained-values?policyForm=HO4",
+					"host": [
+						"{{rootURL}}"
+					],
+					"path": [
+						"quotes",
+						"constrained-values"
+					],
+					"query": [
+						{
+							"key": "policyForm",
+							"value": "HO4",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "124151bf-e5b0-4bea-b329-24e113ad9f92",
+					"name": "HO4 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootURL}}/quotes/constrained-values?policyForm=HO4",
+							"host": [
+								"{{rootURL}}"
+							],
+							"path": [
+								"quotes",
+								"constrained-values"
+							],
+							"query": [
+								{
+									"key": "policyForm",
+									"value": "HO4",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "9365",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "connection",
+							"value": "keep-alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "date",
+							"value": "Thu, 21 Dec 2017 14:34:39 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"2495-Fwh7w60OyrvgRQuOfv/LIxUBb4Q\"",
+							"name": "etag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 460,
+					"body": "{\"coverages\":{\"section1\":{\"aopDeductible\":[\"$500\",\"$1,000\",\"$2,500\",\"$5,000\"],\"hurricaneDeductible\":[\"$500\",\"$1000\",\"$2500\",\"$5000\",\"Ex-Wind\"],\"coverageC\":{\"percentOfCoverageA\":[]}},\"section2\":{\"coverageE\":[\"$100,000\",\"$200,000\",\"$300,000\",\"$500,000\"]},\"optional\":{\"attachedEnclosureOrCarportLimit\":[]}},\"discounts\":{\"burglarAlarm\":[\"None\",\"Central Monitoring Station\",\"Police Station\"],\"fireAlarm\":[\"None\",\"Central Monitoring Station\",\"Fire Station\"],\"fireSprinkler\":[\"None\",\"Full\"],\"openingProtectionLevel\":[\"None\",\"Basic\",\"Hurricane\"],\"securedCommunity\":[\"No\",\"Single Entry or 24 hr Patrol\",\"24 hr Manned or Passkey Gates\",\"N/A\"]},\"insuranceType\":[\"SFI Florida HO4\"],\"priorCoverage\":{\"carrier\":[\"ACA Home Insurance Corp.\",\"ACE Insurance Company of the Midwest\",\"Addison Insurance Company\",\"Affiliated FM Insurance Company\",\"Allstate Insurance Company\",\"American Automobile Insurance Company\",\"American Bankers Insurance Company of Florida\",\"American Capital Assurance Corp.\",\"American Casualty Company of Reading, Pennsylvania\",\"American Home Assurance Company\",\"American Integrity Insurance Company of Florida\",\"American Mercury Insurance Company\",\"American Modern Insurance Company of Florida, Inc.\",\"American Platinum Property and Casualty Insurance Company\",\"American Reliable Insurance Company\",\"American Security Insurance Company\",\"American Southern Home Insurance Company\",\"American States Insurance Company\",\"American Strategic Insurance Corp.\",\"American Traditions Insurance Company\",\"Amica Mutual Insurance Company\",\"Ark Royal Insurance Company\",\"Armed Forces Insurance Exchange\",\"ASI Assurance Corp.\",\"ASI Preferred Insurance Corp.\",\"Associated Indemnity Corporation\",\"Auto Club Insurance Company of Florida\",\"Auto-Owners Insurance Company\",\"Avatar Property & Casualty Insurance Company\",\"Balboa Insurance Company\",\"Bankers Insurance Company\",\"Capitol Preferred Insurance Company, Inc.\",\"Castle Key Insurance Company\",\"Centauri Insurance\",\"Century National Insurance Company\",\"Charter Oak Fire Insurance Company\",\"Chartis Property Casualty Company\",\"Chubb\",\"Church Mutual Insurance Company\",\"Cincinnati Insurance Company\",\"Citizens Property Insurance Corporation\",\"Companion Property and Casualty Insurance Company\",\"Cooperativa De Seguros Multiples de Puerto Rico, Inc.\",\"Cotton States Mutual Insurance Company\",\"Cypress Property & Casualty Insurance Company\",\"Edison Insurance Company\",\"Electric Insurance Company\",\"Encompass Floridian Insurance Company\",\"Federal Insurance Company\",\"Federated National Insurance Company\",\"Fidelity Fire & Casualty Company\",\"Fidelity National Property and Casualty Insurance Company\",\"Fireman's Fund Insurance Company\",\"First American Property & Casualty Insurance Company\",\"First Community Insurance Company\",\"First Floridian Auto and Home Insurance Company\",\"First Home Insurance Company\",\"First Liberty Insurance Corporation (The)\",\"First National Insurance Company of America\",\"First Protective Insurance Company\",\"Florida Family Insurance Company\",\"Florida Farm Bureau Casualty Insurance Company\",\"Florida Peninsula Insurance Company\",\"Foremost Insurance Company\",\"Frontline Insurance Company\",\"Geo Vera\",\"Great Northern Insurance Company\",\"Guideone Elite Insurance Company\",\"Gulfstream Property and Casualty Insurance Company\",\"Hanover American Insurance Company (The)\",\"Hartford Fire Insurance Company\",\"Heritage Insurance Company\",\"Heritage Property & Casualty homeowners Choice Property & Casualty Insurance Company, Inc.\",\"Homesite Insurance Company of Florida\",\"Horace Mann Insurance Company\",\"IDS Property Casualty Insurance Company\",\"Lexington\",\"Liberty Mutual Fire Insurance Company\",\"Lloyds of London\",\"Markel Insurance Company\",\"Metropolitan Casualty Insurance Company\",\"Modern USA Insurance Company\",\"Nationwide Insurance Company of Florida\",\"New Hampshire Insurance Company\",\"Nova Casualty Company\",\"Ohio Casualty Insurance Company\",\"Old Dominion Insurance Company\",\"Olympus Insurance Company\",\"Omega Insurance Company\",\"People's Trust Insurance Company\",\"Prepared Insurance Company\",\"Privilege Underwriters Reciprocal Exchange\",\"Protection and Indemnity\",\"Ranchers and Farmers Insurance Company\",\"Safe Harbor Insurance Company\",\"SAFECO Insurance Company of America\",\"Safepoint Insurance Company\",\"Safeway Property Insurance Company\",\"Sawgrass Mutual Insurance Company\",\"Security First Insurance Company\",\"Service Insurance Company\",\"Shield Insurance Company\",\"Southern Fidelity Insurance Company\",\"Southern Fidelity Property & Casualty, Inc.\",\"Southern Oak Insurance Company\",\"Southern-Owners Insurance Company\",\"Specialty Insurance Company\",\"St. Johns Insurance Company, Inc.\",\"Star & Shield Insurance Exchange\",\"State Farm Florida Insurance Company\",\"Sunshine State Insurance Company\",\"Teachers Insurance Company\",\"Tower Hill Prime Insurance Company\",\"Transportation Insurance Company\",\"Travelers Indemnity Company of America\",\"United Casualty Insurance Company of America\",\"United Fire and Casualty Company\",\"United Property & Casualty Insurance Company, Inc.\",\"United Services Automobile Association\",\"Universal Insurance Company of North America\",\"Universal Property & Casualty Insurance Company\",\"USAA Casualty Insurance Company\",\"Vigilant Insurance Company\",\"Westfield Insurance Company\",\"Weston\",\"Other\"]},\"priorLosses\":{\"type\":[\"Aircraft\",\"All Other - Act of God\",\"All Other - Non Act of God\",\"Automobile\",\"Bodily Injury - All Other\",\"Bodily Injury - Animal Liability\",\"Bodily Injury - Golf Cart\",\"Bodily Injury - Injury to Tenant\",\"Bodily Injury - Motor Vehicle\",\"Bodily Injury - Off Premises\",\"Bodily Injury - On Premises\",\"Bodily Injury - Pollution\",\"Bodily Injury - Pollution - Mold\",\"Bodily Injury - Pool\",\"Bodily Injury - Slip/Fall\",\"Bodily Injury - Trampoline\",\"Bodily Injury - Watercraft\",\"Burglary\",\"Catastrophic Ground Collapse\",\"Collapse - Non Act of God\",\"Collapse - Other Act of God\",\"Credit Card Loss\",\"Earth Movement\",\"Earthquake\",\"Erroneous\",\"Explosion - Other\",\"Falling Objects\",\"Falling Trees\",\"Fire - All Other\",\"Fire - Caused By Candle\",\"Fire - Caused By Wildfire\",\"Fire - Cooking\",\"Fire - Electrical\",\"Fire - Fire Place\",\"Fire - Kitchen\",\"Fire - Lightning\",\"Fire - Caused  by Smoking (Building)\",\"Fire - Caused  by Smoking (Contents)\",\"Flood\",\"Food Spoilage\",\"Freezing\",\"Freezing - Ice Damage\",\"Golf Cart Physical Damage - Collision\",\"Golf Cart Physical Damage - Other\",\"Hail\",\"Hail Loss/ Roof-Only-Building\",\"Identity Theft\",\"Liability - Personal Injury - Advertising\",\"Liability - Personal Injury - False Arrest or Imprisonment\",\"Liability - Personal Injury - Libel\",\"Liability - Personal Injury - Malicious Prosecution\",\"Liability - Personal Injury - Slander\",\"Lightning\",\"Loss Assessment - Act of God\",\"Loss Assessment - Non Act of God\",\"Med Pay - All other\",\"Med Pay - Animal Liability\",\"Med Pay - Golf Cart\",\"Med Pay - Injury to Tenant\",\"Med Pay - Motor Vehicle\",\"Med Pay - Pollution\",\"Med Pay - Pollution - Mold\",\"Med Pay - Pool\",\"Med Pay - Slip & Fall\",\"Med Pay - Trampoline\",\"Med Pay - Watercraft\",\"Mold\",\"Mysterious Disappearance\",\"PD - Act of Child\",\"PD - All Other\",\"PD - Caused by Animal\",\"PD - Motor Vehicle\",\"PD - Pollution\",\"PD - Pollution - Mold\",\"PD - Water Leak\",\"PD - Watercraft\",\"Pollution\",\"Power Surge\",\"Residential Glass\",\"Riot - Civil Commotion\",\"Sinkhole Damage\",\"Smoke\",\"Theft From Auto\",\"Theft Off Premises\",\"Theft On Premises\",\"Vandalism & M.M.\",\"VMM - Looting\",\"Water - Accidental Discharge\",\"Water - All Other\",\"Water - Backup Sewer or Drains\",\"Water - Caused by Appliances\",\"Water - Foundation\",\"Water - Plumbing Leakage or Break\",\"Water - Roof Leak\",\"Water - Seeping though windows or walls\",\"Water - Solar Panels\",\"Water - Sprinkler Leakage\",\"Wind - Hurricane\",\"Wind - Other\",\"Wind - Tornado\",\"Wind - Tropical Storm\"]},\"propertyDetails\":{\"constructionType\":[\"Masonry 100%\",\"Frame 100%\",\"Superior\",\"Mixed Masonry (25% or Less Frame)\",\"Mixed Masonry (26% or More Frame)\"],\"numStories\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"],\"numUnitsInBuilding\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"occupancyAndUsage\":[{\"occupancy\":\"Tenant Occupied\",\"usage\":[\"Rental Only\"]}],\"plumbingPipeMaterial\":[\"PVC/CPVC/PE/PEX\",\"Copper\",\"Polybutylene\",\"Galvanized Steel\",\"Not Listed\"],\"poolType\":[\"In Ground\",\"Above Ground\"],\"roofDetails\":{\"cover\":[\"Non FBC Equivalent\",\"FBC Equivalent\",\"Reinforced Concrete Roof Deck\"],\"deckAttachment\":[\"A - 6d @ 6\\\" / 12\\\"\",\"B - 8d @ 6\\\" / 12\\\"\",\"C - 8d @ 6\\\" / 6\\\"\",\"Reinforced Concrete\",\"Unknown\",\"Metal Deck\",\"Wood Deck\"],\"material\":[\"Shingles: Asphalt or Composition\",\"Shingles: Wood or Wood Shake\",\"Shingles: Metal\",\"Shingles: Solar\",\"Tile: Flat Slate\",\"Tile: Flat Concrete, Clay or Composite\",\"Tile: S Curve Concrete, Clay or Composite\",\"Tile: Flat Metal\",\"Metal: Light Panels Slate\",\"Metal: Standing Seam\",\"Built-up: Not Ballasted\",\"Built-up: Roof Ballasted\",\"Built-up: Single Ply membrane - Not ballasted/stabilized\",\"Built-up: Single Ply membrane - Ballasted\",\"Built-up: Concrete Fill\",\"Thermoplastic Polyolefin\",\"Other\",\"Asbestos\"],\"shape\":[\"Flat\",\"Gable\",\"Hip\",\"Other\"],\"wallAttachment\":[\"Toe Nails\",\"Clips\",\"Single Wraps\",\"Double Wraps\",\"Unknown\"]},\"secondaryWaterResistance\":[\"Yes\",\"No\",\"Unknown\"],\"structureType\":[\"Apartments - 2 to 4 Units\",\"Apartments - 5+ Units\",\"Condo - 2 to 4 Units\",\"Condo - 5+ Units\",\"Duplex\",\"Triplex\",\"Fourplex\",\"Single Family House\",\"Single Family Modular\",\"Mobile/Manufactured/Park Model/RV\",\"Townhouse\"]}}"
+				}
+			]
+		},
+		{
+			"name": "HO6",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "service",
+							"value": "{{awsService}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "{{awsRegion}}",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "{{accessKey}}",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{rootURL}}/quotes/constrained-values?policyForm=HO4",
+					"host": [
+						"{{rootURL}}"
+					],
+					"path": [
+						"quotes",
+						"constrained-values"
+					],
+					"query": [
+						{
+							"key": "policyForm",
+							"value": "HO4",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "717c8bbf-04b3-48a7-865d-2fbc2cdeec3b",
+					"name": "HO6 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootURL}}/quotes/constrained-values?policyForm=HO6",
+							"host": [
+								"{{rootURL}}"
+							],
+							"path": [
+								"quotes",
+								"constrained-values"
+							],
+							"query": [
+								{
+									"key": "policyForm",
+									"value": "HO6",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "9851",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "connection",
+							"value": "keep-alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "date",
+							"value": "Thu, 21 Dec 2017 14:43:47 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"267b-cYIda0mqPkk3jIgw4BzdoJmf7IE\"",
+							"name": "etag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 313,
+					"body": "{\"coverages\":{\"section1\":{\"aopDeductible\":[\"$500\",\"$1,000\",\"$2,500\",\"$5,000\"],\"hurricaneDeductible\":[\"$500\",\"$1000\",\"$2500\",\"$5000\",\"Ex-Wind\"],\"coverageC\":{\"percentOfCoverageA\":[]}},\"section2\":{\"coverageE\":[\"$100,000\",\"$200,000\",\"$300,000\",\"$500,000\"]},\"optional\":{\"attachedEnclosureOrCarportLimit\":[\"$0\",\"$5,000\",\"$10,000\",\"$15,000\",\"$20,000\",\"$25,000\",\"$30,000\",\"$35,000\",\"$40,000\",\"$45,000\",\"$50,000\",\"$55,000\",\"$60,000\",\"$65,000\",\"$70,000\",\"$75,000\"]}},\"discounts\":{\"burglarAlarm\":[\"None\",\"Central Monitoring Station\",\"Police Station\"],\"fireAlarm\":[\"None\",\"Central Monitoring Station\",\"Fire Station\"],\"fireSprinkler\":[\"None\",\"Full\"],\"openingProtectionLevel\":[\"None\",\"Basic\",\"Hurricane\"],\"securedCommunity\":[\"No\",\"Single Entry or 24 hr Patrol\",\"24 hr Manned or Passkey Gates\",\"N/A\"]},\"insuranceType\":[\"SFI Florida HO6\"],\"priorCoverage\":{\"carrier\":[\"ACA Home Insurance Corp.\",\"ACE Insurance Company of the Midwest\",\"Addison Insurance Company\",\"Affiliated FM Insurance Company\",\"Allstate Insurance Company\",\"American Automobile Insurance Company\",\"American Bankers Insurance Company of Florida\",\"American Capital Assurance Corp.\",\"American Casualty Company of Reading, Pennsylvania\",\"American Home Assurance Company\",\"American Integrity Insurance Company of Florida\",\"American Mercury Insurance Company\",\"American Modern Insurance Company of Florida, Inc.\",\"American Platinum Property and Casualty Insurance Company\",\"American Reliable Insurance Company\",\"American Security Insurance Company\",\"American Southern Home Insurance Company\",\"American States Insurance Company\",\"American Strategic Insurance Corp.\",\"American Traditions Insurance Company\",\"Amica Mutual Insurance Company\",\"Ark Royal Insurance Company\",\"Armed Forces Insurance Exchange\",\"ASI Assurance Corp.\",\"ASI Preferred Insurance Corp.\",\"Associated Indemnity Corporation\",\"Auto Club Insurance Company of Florida\",\"Auto-Owners Insurance Company\",\"Avatar Property & Casualty Insurance Company\",\"Balboa Insurance Company\",\"Bankers Insurance Company\",\"Capitol Preferred Insurance Company, Inc.\",\"Castle Key Insurance Company\",\"Centauri Insurance\",\"Century National Insurance Company\",\"Charter Oak Fire Insurance Company\",\"Chartis Property Casualty Company\",\"Chubb\",\"Church Mutual Insurance Company\",\"Cincinnati Insurance Company\",\"Citizens Property Insurance Corporation\",\"Companion Property and Casualty Insurance Company\",\"Cooperativa De Seguros Multiples de Puerto Rico, Inc.\",\"Cotton States Mutual Insurance Company\",\"Cypress Property & Casualty Insurance Company\",\"Edison Insurance Company\",\"Electric Insurance Company\",\"Encompass Floridian Insurance Company\",\"Federal Insurance Company\",\"Federated National Insurance Company\",\"Fidelity Fire & Casualty Company\",\"Fidelity National Property and Casualty Insurance Company\",\"Fireman's Fund Insurance Company\",\"First American Property & Casualty Insurance Company\",\"First Community Insurance Company\",\"First Floridian Auto and Home Insurance Company\",\"First Home Insurance Company\",\"First Liberty Insurance Corporation (The)\",\"First National Insurance Company of America\",\"First Protective Insurance Company\",\"Florida Family Insurance Company\",\"Florida Farm Bureau Casualty Insurance Company\",\"Florida Peninsula Insurance Company\",\"Foremost Insurance Company\",\"Frontline Insurance Company\",\"Geo Vera\",\"Great Northern Insurance Company\",\"Guideone Elite Insurance Company\",\"Gulfstream Property and Casualty Insurance Company\",\"Hanover American Insurance Company (The)\",\"Hartford Fire Insurance Company\",\"Heritage Insurance Company\",\"Heritage Property & Casualty homeowners Choice Property & Casualty Insurance Company, Inc.\",\"Homesite Insurance Company of Florida\",\"Horace Mann Insurance Company\",\"IDS Property Casualty Insurance Company\",\"Lexington\",\"Liberty Mutual Fire Insurance Company\",\"Lloyds of London\",\"Markel Insurance Company\",\"Metropolitan Casualty Insurance Company\",\"Modern USA Insurance Company\",\"Nationwide Insurance Company of Florida\",\"New Hampshire Insurance Company\",\"Nova Casualty Company\",\"Ohio Casualty Insurance Company\",\"Old Dominion Insurance Company\",\"Olympus Insurance Company\",\"Omega Insurance Company\",\"People's Trust Insurance Company\",\"Prepared Insurance Company\",\"Privilege Underwriters Reciprocal Exchange\",\"Protection and Indemnity\",\"Ranchers and Farmers Insurance Company\",\"Safe Harbor Insurance Company\",\"SAFECO Insurance Company of America\",\"Safepoint Insurance Company\",\"Safeway Property Insurance Company\",\"Sawgrass Mutual Insurance Company\",\"Security First Insurance Company\",\"Service Insurance Company\",\"Shield Insurance Company\",\"Southern Fidelity Insurance Company\",\"Southern Fidelity Property & Casualty, Inc.\",\"Southern Oak Insurance Company\",\"Southern-Owners Insurance Company\",\"Specialty Insurance Company\",\"St. Johns Insurance Company, Inc.\",\"Star & Shield Insurance Exchange\",\"State Farm Florida Insurance Company\",\"Sunshine State Insurance Company\",\"Teachers Insurance Company\",\"Tower Hill Prime Insurance Company\",\"Transportation Insurance Company\",\"Travelers Indemnity Company of America\",\"United Casualty Insurance Company of America\",\"United Fire and Casualty Company\",\"United Property & Casualty Insurance Company, Inc.\",\"United Services Automobile Association\",\"Universal Insurance Company of North America\",\"Universal Property & Casualty Insurance Company\",\"USAA Casualty Insurance Company\",\"Vigilant Insurance Company\",\"Westfield Insurance Company\",\"Weston\",\"Other\"]},\"priorLosses\":{\"type\":[\"Aircraft\",\"All Other - Act of God\",\"All Other - Non Act of God\",\"Automobile\",\"Bodily Injury - All Other\",\"Bodily Injury - Animal Liability\",\"Bodily Injury - Golf Cart\",\"Bodily Injury - Injury to Tenant\",\"Bodily Injury - Motor Vehicle\",\"Bodily Injury - Off Premises\",\"Bodily Injury - On Premises\",\"Bodily Injury - Pollution\",\"Bodily Injury - Pollution - Mold\",\"Bodily Injury - Pool\",\"Bodily Injury - Slip/Fall\",\"Bodily Injury - Trampoline\",\"Bodily Injury - Watercraft\",\"Burglary\",\"Catastrophic Ground Collapse\",\"Collapse - Non Act of God\",\"Collapse - Other Act of God\",\"Credit Card Loss\",\"Earth Movement\",\"Earthquake\",\"Erroneous\",\"Explosion - Other\",\"Falling Objects\",\"Falling Trees\",\"Fire - All Other\",\"Fire - Caused By Candle\",\"Fire - Caused By Wildfire\",\"Fire - Cooking\",\"Fire - Electrical\",\"Fire - Fire Place\",\"Fire - Kitchen\",\"Fire - Lightning\",\"Fire - Caused  by Smoking (Building)\",\"Fire - Caused  by Smoking (Contents)\",\"Flood\",\"Food Spoilage\",\"Freezing\",\"Freezing - Ice Damage\",\"Golf Cart Physical Damage - Collision\",\"Golf Cart Physical Damage - Other\",\"Hail\",\"Hail Loss/ Roof-Only-Building\",\"Identity Theft\",\"Liability - Personal Injury - Advertising\",\"Liability - Personal Injury - False Arrest or Imprisonment\",\"Liability - Personal Injury - Libel\",\"Liability - Personal Injury - Malicious Prosecution\",\"Liability - Personal Injury - Slander\",\"Lightning\",\"Loss Assessment - Act of God\",\"Loss Assessment - Non Act of God\",\"Med Pay - All other\",\"Med Pay - Animal Liability\",\"Med Pay - Golf Cart\",\"Med Pay - Injury to Tenant\",\"Med Pay - Motor Vehicle\",\"Med Pay - Pollution\",\"Med Pay - Pollution - Mold\",\"Med Pay - Pool\",\"Med Pay - Slip & Fall\",\"Med Pay - Trampoline\",\"Med Pay - Watercraft\",\"Mold\",\"Mysterious Disappearance\",\"PD - Act of Child\",\"PD - All Other\",\"PD - Caused by Animal\",\"PD - Motor Vehicle\",\"PD - Pollution\",\"PD - Pollution - Mold\",\"PD - Water Leak\",\"PD - Watercraft\",\"Pollution\",\"Power Surge\",\"Residential Glass\",\"Riot - Civil Commotion\",\"Sinkhole Damage\",\"Smoke\",\"Theft From Auto\",\"Theft Off Premises\",\"Theft On Premises\",\"Vandalism & M.M.\",\"VMM - Looting\",\"Water - Accidental Discharge\",\"Water - All Other\",\"Water - Backup Sewer or Drains\",\"Water - Caused by Appliances\",\"Water - Foundation\",\"Water - Plumbing Leakage or Break\",\"Water - Roof Leak\",\"Water - Seeping though windows or walls\",\"Water - Solar Panels\",\"Water - Sprinkler Leakage\",\"Wind - Hurricane\",\"Wind - Other\",\"Wind - Tornado\",\"Wind - Tropical Storm\"]},\"propertyDetails\":{\"constructionType\":[\"Masonry 100%\",\"Frame 100%\",\"Superior\",\"Mixed Masonry (25% or Less Frame)\",\"Mixed Masonry (26% or More Frame)\"],\"numStories\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"],\"numUnitsInBuilding\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"occupancyAndUsage\":[{\"occupancy\":\"Owner Occupied\",\"usage\":[\"Primary Residence, Not Rented\",\"Secondary Residence, Not Rented\"]},{\"occupancy\":\"Immediate Family\",\"usage\":[\"Primary Residence, Not Rented\",\"Secondary Residence, Not Rented\"]},{\"occupancy\":\"Seasonal\",\"usage\":[\"Seasonal Residence, Not Rented\",\"Rental Only\",\"Seasonal Residence, Rented\"]},{\"occupancy\":\"Secondary\",\"usage\":[\"Secondary Residence, Not Rented\",\"Rental Only\",\"Secondary Residence, Rented\"]}],\"plumbingPipeMaterial\":[\"PVC/CPVC/PE/PEX\",\"Copper\",\"Polybutylene\",\"Galvanized Steel\",\"Not Listed\"],\"poolType\":[\"In Ground\",\"Above Ground\"],\"roofDetails\":{\"cover\":[\"Non FBC Equivalent\",\"FBC Equivalent\",\"Reinforced Concrete Roof Deck\"],\"deckAttachment\":[\"A - 6d @ 6\\\" / 12\\\"\",\"B - 8d @ 6\\\" / 12\\\"\",\"C - 8d @ 6\\\" / 6\\\"\",\"Reinforced Concrete\",\"Unknown\",\"Metal Deck\",\"Wood Deck\"],\"material\":[\"Shingles: Asphalt or Composition\",\"Shingles: Wood or Wood Shake\",\"Shingles: Metal\",\"Shingles: Solar\",\"Tile: Flat Slate\",\"Tile: Flat Concrete, Clay or Composite\",\"Tile: S Curve Concrete, Clay or Composite\",\"Tile: Flat Metal\",\"Metal: Light Panels Slate\",\"Metal: Standing Seam\",\"Built-up: Not Ballasted\",\"Built-up: Roof Ballasted\",\"Built-up: Single Ply membrane - Not ballasted/stabilized\",\"Built-up: Single Ply membrane - Ballasted\",\"Built-up: Concrete Fill\",\"Thermoplastic Polyolefin\",\"Other\",\"Asbestos\"],\"shape\":[\"Flat\",\"Gable\",\"Hip\",\"Other\"],\"wallAttachment\":[\"Toe Nails\",\"Clips\",\"Single Wraps\",\"Double Wraps\",\"Unknown\"]},\"secondaryWaterResistance\":[\"Yes\",\"No\",\"Unknown\"],\"structureType\":[\"Condo - 2 to 4 Units\",\"Condo - 5+ Units\",\"Single Family House\",\"Mobile/Manufactured/Park Model/RV\",\"Townhouse\",\"Duplex\",\"Triplex\",\"Fourplex\",\"Single Family Modular\"]}}"
+				}
+			]
+		},
+		{
+			"name": "DF3-DO",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "service",
+							"value": "{{awsService}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "{{awsRegion}}",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "{{accessKey}}",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{rootURL}}/quotes/constrained-values?policyForm=DF3-DO",
+					"host": [
+						"{{rootURL}}"
+					],
+					"path": [
+						"quotes",
+						"constrained-values"
+					],
+					"query": [
+						{
+							"key": "policyForm",
+							"value": "DF3-DO",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "4edeb5fa-7392-4a05-b62b-8bac21b2f465",
+					"name": "DF3-DO response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootURL}}/quotes/constrained-values?policyForm=DF3-DO",
+							"host": [
+								"{{rootURL}}"
+							],
+							"path": [
+								"quotes",
+								"constrained-values"
+							],
+							"query": [
+								{
+									"key": "policyForm",
+									"value": "DF3-DO",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "9565",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "connection",
+							"value": "keep-alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "date",
+							"value": "Thu, 21 Dec 2017 14:39:26 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"255d-Uh1/vROisAsnWpfNio3SxXR7eeA\"",
+							"name": "etag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 439,
+					"body": "{\"coverages\":{\"section1\":{\"aopDeductible\":[\"$500\",\"$1,000\",\"$2,500\",\"$5,000\"],\"hurricaneDeductible\":[\"$500\",\"2% of Coverage A\",\"5% of Coverage A\",\"10% of Coverage A\",\"Ex Wind\"],\"coverageC\":{\"percentOfCoverageA\":[]}},\"optional\":{\"attachedEnclosureOrCarportLimit\":[\"$10,000\",\"$20,000\",\"$30,000\",\"$40,000\",\"$50,000\"]}},\"discounts\":{\"burglarAlarm\":[\"None\",\"Central Monitoring Station\",\"Police Station\"],\"fireAlarm\":[\"None\",\"Central Monitoring Station\",\"Fire Station\"],\"fireSprinkler\":[\"None\",\"Full\"],\"openingProtectionLevel\":[\"None\",\"Basic\",\"Hurricane\"],\"securedCommunity\":[\"No\",\"Single Entry or 24 hr Patrol\",\"24 hr Manned or Passkey Gates\",\"N/A\"]},\"insuranceType\":[\"SFI Florida DF3 DO\"],\"priorCoverage\":{\"carrier\":[\"ACA Home Insurance Corp.\",\"ACE Insurance Company of the Midwest\",\"Addison Insurance Company\",\"Affiliated FM Insurance Company\",\"Allstate Insurance Company\",\"American Automobile Insurance Company\",\"American Bankers Insurance Company of Florida\",\"American Capital Assurance Corp.\",\"American Casualty Company of Reading, Pennsylvania\",\"American Home Assurance Company\",\"American Integrity Insurance Company of Florida\",\"American Mercury Insurance Company\",\"American Modern Insurance Company of Florida, Inc.\",\"American Platinum Property and Casualty Insurance Company\",\"American Reliable Insurance Company\",\"American Security Insurance Company\",\"American Southern Home Insurance Company\",\"American States Insurance Company\",\"American Strategic Insurance Corp.\",\"American Traditions Insurance Company\",\"Amica Mutual Insurance Company\",\"Ark Royal Insurance Company\",\"Armed Forces Insurance Exchange\",\"ASI Assurance Corp.\",\"ASI Preferred Insurance Corp.\",\"Associated Indemnity Corporation\",\"Auto Club Insurance Company of Florida\",\"Auto-Owners Insurance Company\",\"Avatar Property & Casualty Insurance Company\",\"Balboa Insurance Company\",\"Bankers Insurance Company\",\"Capitol Preferred Insurance Company, Inc.\",\"Castle Key Insurance Company\",\"Centauri Insurance\",\"Century National Insurance Company\",\"Charter Oak Fire Insurance Company\",\"Chartis Property Casualty Company\",\"Chubb\",\"Church Mutual Insurance Company\",\"Cincinnati Insurance Company\",\"Citizens Property Insurance Corporation\",\"Companion Property and Casualty Insurance Company\",\"Cooperativa De Seguros Multiples de Puerto Rico, Inc.\",\"Cotton States Mutual Insurance Company\",\"Cypress Property & Casualty Insurance Company\",\"Edison Insurance Company\",\"Electric Insurance Company\",\"Encompass Floridian Insurance Company\",\"Federal Insurance Company\",\"Federated National Insurance Company\",\"Fidelity Fire & Casualty Company\",\"Fidelity National Property and Casualty Insurance Company\",\"Fireman's Fund Insurance Company\",\"First American Property & Casualty Insurance Company\",\"First Community Insurance Company\",\"First Floridian Auto and Home Insurance Company\",\"First Home Insurance Company\",\"First Liberty Insurance Corporation (The)\",\"First National Insurance Company of America\",\"First Protective Insurance Company\",\"Florida Family Insurance Company\",\"Florida Farm Bureau Casualty Insurance Company\",\"Florida Peninsula Insurance Company\",\"Foremost Insurance Company\",\"Frontline Insurance Company\",\"Geo Vera\",\"Great Northern Insurance Company\",\"Guideone Elite Insurance Company\",\"Gulfstream Property and Casualty Insurance Company\",\"Hanover American Insurance Company (The)\",\"Hartford Fire Insurance Company\",\"Heritage Insurance Company\",\"Heritage Property & Casualty homeowners Choice Property & Casualty Insurance Company, Inc.\",\"Homesite Insurance Company of Florida\",\"Horace Mann Insurance Company\",\"IDS Property Casualty Insurance Company\",\"Lexington\",\"Liberty Mutual Fire Insurance Company\",\"Lloyds of London\",\"Markel Insurance Company\",\"Metropolitan Casualty Insurance Company\",\"Modern USA Insurance Company\",\"Nationwide Insurance Company of Florida\",\"New Hampshire Insurance Company\",\"Nova Casualty Company\",\"Ohio Casualty Insurance Company\",\"Old Dominion Insurance Company\",\"Olympus Insurance Company\",\"Omega Insurance Company\",\"People's Trust Insurance Company\",\"Prepared Insurance Company\",\"Privilege Underwriters Reciprocal Exchange\",\"Protection and Indemnity\",\"Ranchers and Farmers Insurance Company\",\"Safe Harbor Insurance Company\",\"SAFECO Insurance Company of America\",\"Safepoint Insurance Company\",\"Safeway Property Insurance Company\",\"Sawgrass Mutual Insurance Company\",\"Security First Insurance Company\",\"Service Insurance Company\",\"Shield Insurance Company\",\"Southern Fidelity Insurance Company\",\"Southern Fidelity Property & Casualty, Inc.\",\"Southern Oak Insurance Company\",\"Southern-Owners Insurance Company\",\"Specialty Insurance Company\",\"St. Johns Insurance Company, Inc.\",\"Star & Shield Insurance Exchange\",\"State Farm Florida Insurance Company\",\"Sunshine State Insurance Company\",\"Teachers Insurance Company\",\"Tower Hill Prime Insurance Company\",\"Transportation Insurance Company\",\"Travelers Indemnity Company of America\",\"United Casualty Insurance Company of America\",\"United Fire and Casualty Company\",\"United Property & Casualty Insurance Company, Inc.\",\"United Services Automobile Association\",\"Universal Insurance Company of North America\",\"Universal Property & Casualty Insurance Company\",\"USAA Casualty Insurance Company\",\"Vigilant Insurance Company\",\"Westfield Insurance Company\",\"Weston\",\"Other\"]},\"priorLosses\":{\"type\":[\"Aircraft\",\"All Other - Act of God\",\"All Other - Non Act of God\",\"Automobile\",\"Bodily Injury - All Other\",\"Bodily Injury - Animal Liability\",\"Bodily Injury - Golf Cart\",\"Bodily Injury - Injury to Tenant\",\"Bodily Injury - Motor Vehicle\",\"Bodily Injury - Off Premises\",\"Bodily Injury - On Premises\",\"Bodily Injury - Pollution\",\"Bodily Injury - Pollution - Mold\",\"Bodily Injury - Pool\",\"Bodily Injury - Slip/Fall\",\"Bodily Injury - Trampoline\",\"Bodily Injury - Watercraft\",\"Burglary\",\"Catastrophic Ground Collapse\",\"Collapse - Non Act of God\",\"Collapse - Other Act of God\",\"Credit Card Loss\",\"Earth Movement\",\"Earthquake\",\"Erroneous\",\"Explosion - Other\",\"Falling Objects\",\"Falling Trees\",\"Fire - All Other\",\"Fire - Caused By Candle\",\"Fire - Caused By Wildfire\",\"Fire - Cooking\",\"Fire - Electrical\",\"Fire - Fire Place\",\"Fire - Kitchen\",\"Fire - Lightning\",\"Fire - Caused  by Smoking (Building)\",\"Fire - Caused  by Smoking (Contents)\",\"Flood\",\"Food Spoilage\",\"Freezing\",\"Freezing - Ice Damage\",\"Golf Cart Physical Damage - Collision\",\"Golf Cart Physical Damage - Other\",\"Hail\",\"Hail Loss/ Roof-Only-Building\",\"Identity Theft\",\"Liability - Personal Injury - Advertising\",\"Liability - Personal Injury - False Arrest or Imprisonment\",\"Liability - Personal Injury - Libel\",\"Liability - Personal Injury - Malicious Prosecution\",\"Liability - Personal Injury - Slander\",\"Lightning\",\"Loss Assessment - Act of God\",\"Loss Assessment - Non Act of God\",\"Med Pay - All other\",\"Med Pay - Animal Liability\",\"Med Pay - Golf Cart\",\"Med Pay - Injury to Tenant\",\"Med Pay - Motor Vehicle\",\"Med Pay - Pollution\",\"Med Pay - Pollution - Mold\",\"Med Pay - Pool\",\"Med Pay - Slip & Fall\",\"Med Pay - Trampoline\",\"Med Pay - Watercraft\",\"Mold\",\"Mysterious Disappearance\",\"PD - Act of Child\",\"PD - All Other\",\"PD - Caused by Animal\",\"PD - Motor Vehicle\",\"PD - Pollution\",\"PD - Pollution - Mold\",\"PD - Water Leak\",\"PD - Watercraft\",\"Pollution\",\"Power Surge\",\"Residential Glass\",\"Riot - Civil Commotion\",\"Sinkhole Damage\",\"Smoke\",\"Theft From Auto\",\"Theft Off Premises\",\"Theft On Premises\",\"Vandalism & M.M.\",\"VMM - Looting\",\"Water - Accidental Discharge\",\"Water - All Other\",\"Water - Backup Sewer or Drains\",\"Water - Caused by Appliances\",\"Water - Foundation\",\"Water - Plumbing Leakage or Break\",\"Water - Roof Leak\",\"Water - Seeping though windows or walls\",\"Water - Solar Panels\",\"Water - Sprinkler Leakage\",\"Wind - Hurricane\",\"Wind - Other\",\"Wind - Tornado\",\"Wind - Tropical Storm\"]},\"propertyDetails\":{\"constructionType\":[\"Masonry 100%\",\"Frame 100%\",\"Superior\",\"Mixed Masonry (25% or Less Frame)\",\"Mixed Masonry (26% or More Frame)\"],\"numStories\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"],\"numUnitsInBuilding\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"occupancyAndUsage\":[{\"occupancy\":\"Owner Occupied\",\"usage\":[\"Primary Residence, Not Rented\",\"Secondary Residence, Not Rented\"]},{\"occupancy\":\"Immediate Family\",\"usage\":[\"Primary Residence, Not Rented\",\"Secondary Residence, Not Rented\"]},{\"occupancy\":\"Seasonal\",\"usage\":[\"Seasonal Residence, Not Rented\"]},{\"occupancy\":\"Secondary\",\"usage\":[\"Secondary Residence, Not Rented\"]}],\"plumbingPipeMaterial\":[\"PVC/CPVC/PE/PEX\",\"Copper\",\"Polybutylene\",\"Galvanized Steel\",\"Not Listed\"],\"poolType\":[\"In Ground\",\"Above Ground\"],\"roofDetails\":{\"cover\":[\"Non FBC Equivalent\",\"FBC Equivalent\",\"Reinforced Concrete Roof Deck\",\"N/A\"],\"deckAttachment\":[\"A - 6d @ 6\\\" / 12\\\"\",\"B - 8d @ 6\\\" / 12\\\"\",\"C - 8d @ 6\\\" / 6\\\"\",\"Reinforced Concrete\",\"Unknown\"],\"material\":[\"Shingles: Asphalt or Composition\",\"Shingles: Wood or Wood Shake\",\"Shingles: Metal\",\"Shingles: Solar\",\"Tile: Flat Slate\",\"Tile: Flat Concrete, Clay or Composite\",\"Tile: S Curve Concrete, Clay or Composite\",\"Tile: Flat Metal\",\"Metal: Light Panels Slate\",\"Metal: Standing Seam\",\"Built-up: Not Ballasted\",\"Built-up: Roof Ballasted\",\"Built-up: Single Ply membrane - Not ballasted/stabilized\",\"Built-up: Single Ply membrane - Ballasted\",\"Built-up: Concrete Fill\",\"Thermoplastic Polyolefin\",\"Other\",\"Asbestos\"],\"shape\":[\"Flat\",\"Gable\",\"Hip\",\"Other\"],\"wallAttachment\":[\"Toe Nails\",\"Clips\",\"Single Wraps\",\"Double Wraps\",\"Unknown\"]},\"secondaryWaterResistance\":[\"Yes\",\"No\",\"Unknown\"],\"structureType\":[\"Single Family House\",\"Single Family Modular\",\"Duplex\",\"Townhouse\",\"Triplex\",\"Fourplex\",\"Mobile/Manufactured/Park Model/RV\"]}}"
+				}
+			]
+		},
+		{
+			"name": "DF3-DL",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "service",
+							"value": "{{awsService}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "{{awsRegion}}",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "{{accessKey}}",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{rootURL}}/quotes/constrained-values?policyForm=DF3-DL",
+					"host": [
+						"{{rootURL}}"
+					],
+					"path": [
+						"quotes",
+						"constrained-values"
+					],
+					"query": [
+						{
+							"key": "policyForm",
+							"value": "DF3-DL",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "646b2a2d-b0a9-4087-b538-f8678d955c26",
+					"name": "DF3-DL response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootURL}}/quotes/constrained-values?policyForm=DF3-DL",
+							"host": [
+								"{{rootURL}}"
+							],
+							"path": [
+								"quotes",
+								"constrained-values"
+							],
+							"query": [
+								{
+									"key": "policyForm",
+									"value": "DF3-DL",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "9633",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "connection",
+							"value": "keep-alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "date",
+							"value": "Thu, 21 Dec 2017 14:44:53 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"25a1-Oa4EV0iPWD6B/Yc4jkHpKN9Vexw\"",
+							"name": "etag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 388,
+					"body": "{\"coverages\":{\"section1\":{\"aopDeductible\":[\"$500\",\"$1,000\",\"$2,500\",\"$5,000\"],\"hurricaneDeductible\":[\"$500\",\"2% of Coverage A\",\"5% of Coverage A\",\"10% of Coverage A\",\"Ex Wind\"],\"coverageC\":{\"percentOfCoverageA\":[]}},\"optional\":{\"attachedEnclosureOrCarportLimit\":[\"$10,000\",\"$20,000\",\"$30,000\",\"$40,000\",\"$50,000\"]}},\"discounts\":{\"burglarAlarm\":[\"None\",\"Central Monitoring Station\",\"Police Station\"],\"fireAlarm\":[\"None\",\"Central Monitoring Station\",\"Fire Station\"],\"fireSprinkler\":[\"None\",\"Full\"],\"openingProtectionLevel\":[\"None\",\"Basic\",\"Hurricane\"],\"securedCommunity\":[\"No\",\"Single Entry or 24 hr Patrol\",\"24 hr Manned or Passkey Gates\",\"N/A\"]},\"insuranceType\":[\"SFI Florida DF3 DL\"],\"priorCoverage\":{\"carrier\":[\"ACA Home Insurance Corp.\",\"ACE Insurance Company of the Midwest\",\"Addison Insurance Company\",\"Affiliated FM Insurance Company\",\"Allstate Insurance Company\",\"American Automobile Insurance Company\",\"American Bankers Insurance Company of Florida\",\"American Capital Assurance Corp.\",\"American Casualty Company of Reading, Pennsylvania\",\"American Home Assurance Company\",\"American Integrity Insurance Company of Florida\",\"American Mercury Insurance Company\",\"American Modern Insurance Company of Florida, Inc.\",\"American Platinum Property and Casualty Insurance Company\",\"American Reliable Insurance Company\",\"American Security Insurance Company\",\"American Southern Home Insurance Company\",\"American States Insurance Company\",\"American Strategic Insurance Corp.\",\"American Traditions Insurance Company\",\"Amica Mutual Insurance Company\",\"Ark Royal Insurance Company\",\"Armed Forces Insurance Exchange\",\"ASI Assurance Corp.\",\"ASI Preferred Insurance Corp.\",\"Associated Indemnity Corporation\",\"Auto Club Insurance Company of Florida\",\"Auto-Owners Insurance Company\",\"Avatar Property & Casualty Insurance Company\",\"Balboa Insurance Company\",\"Bankers Insurance Company\",\"Capitol Preferred Insurance Company, Inc.\",\"Castle Key Insurance Company\",\"Centauri Insurance\",\"Century National Insurance Company\",\"Charter Oak Fire Insurance Company\",\"Chartis Property Casualty Company\",\"Chubb\",\"Church Mutual Insurance Company\",\"Cincinnati Insurance Company\",\"Citizens Property Insurance Corporation\",\"Companion Property and Casualty Insurance Company\",\"Cooperativa De Seguros Multiples de Puerto Rico, Inc.\",\"Cotton States Mutual Insurance Company\",\"Cypress Property & Casualty Insurance Company\",\"Edison Insurance Company\",\"Electric Insurance Company\",\"Encompass Floridian Insurance Company\",\"Federal Insurance Company\",\"Federated National Insurance Company\",\"Fidelity Fire & Casualty Company\",\"Fidelity National Property and Casualty Insurance Company\",\"Fireman's Fund Insurance Company\",\"First American Property & Casualty Insurance Company\",\"First Community Insurance Company\",\"First Floridian Auto and Home Insurance Company\",\"First Home Insurance Company\",\"First Liberty Insurance Corporation (The)\",\"First National Insurance Company of America\",\"First Protective Insurance Company\",\"Florida Family Insurance Company\",\"Florida Farm Bureau Casualty Insurance Company\",\"Florida Peninsula Insurance Company\",\"Foremost Insurance Company\",\"Frontline Insurance Company\",\"Geo Vera\",\"Great Northern Insurance Company\",\"Guideone Elite Insurance Company\",\"Gulfstream Property and Casualty Insurance Company\",\"Hanover American Insurance Company (The)\",\"Hartford Fire Insurance Company\",\"Heritage Insurance Company\",\"Heritage Property & Casualty homeowners Choice Property & Casualty Insurance Company, Inc.\",\"Homesite Insurance Company of Florida\",\"Horace Mann Insurance Company\",\"IDS Property Casualty Insurance Company\",\"Lexington\",\"Liberty Mutual Fire Insurance Company\",\"Lloyds of London\",\"Markel Insurance Company\",\"Metropolitan Casualty Insurance Company\",\"Modern USA Insurance Company\",\"Nationwide Insurance Company of Florida\",\"New Hampshire Insurance Company\",\"Nova Casualty Company\",\"Ohio Casualty Insurance Company\",\"Old Dominion Insurance Company\",\"Olympus Insurance Company\",\"Omega Insurance Company\",\"People's Trust Insurance Company\",\"Prepared Insurance Company\",\"Privilege Underwriters Reciprocal Exchange\",\"Protection and Indemnity\",\"Ranchers and Farmers Insurance Company\",\"Safe Harbor Insurance Company\",\"SAFECO Insurance Company of America\",\"Safepoint Insurance Company\",\"Safeway Property Insurance Company\",\"Sawgrass Mutual Insurance Company\",\"Security First Insurance Company\",\"Service Insurance Company\",\"Shield Insurance Company\",\"Southern Fidelity Insurance Company\",\"Southern Fidelity Property & Casualty, Inc.\",\"Southern Oak Insurance Company\",\"Southern-Owners Insurance Company\",\"Specialty Insurance Company\",\"St. Johns Insurance Company, Inc.\",\"Star & Shield Insurance Exchange\",\"State Farm Florida Insurance Company\",\"Sunshine State Insurance Company\",\"Teachers Insurance Company\",\"Tower Hill Prime Insurance Company\",\"Transportation Insurance Company\",\"Travelers Indemnity Company of America\",\"United Casualty Insurance Company of America\",\"United Fire and Casualty Company\",\"United Property & Casualty Insurance Company, Inc.\",\"United Services Automobile Association\",\"Universal Insurance Company of North America\",\"Universal Property & Casualty Insurance Company\",\"USAA Casualty Insurance Company\",\"Vigilant Insurance Company\",\"Westfield Insurance Company\",\"Weston\",\"Other\"]},\"priorLosses\":{\"type\":[\"Aircraft\",\"All Other - Act of God\",\"All Other - Non Act of God\",\"Automobile\",\"Bodily Injury - All Other\",\"Bodily Injury - Animal Liability\",\"Bodily Injury - Golf Cart\",\"Bodily Injury - Injury to Tenant\",\"Bodily Injury - Motor Vehicle\",\"Bodily Injury - Off Premises\",\"Bodily Injury - On Premises\",\"Bodily Injury - Pollution\",\"Bodily Injury - Pollution - Mold\",\"Bodily Injury - Pool\",\"Bodily Injury - Slip/Fall\",\"Bodily Injury - Trampoline\",\"Bodily Injury - Watercraft\",\"Burglary\",\"Catastrophic Ground Collapse\",\"Collapse - Non Act of God\",\"Collapse - Other Act of God\",\"Credit Card Loss\",\"Earth Movement\",\"Earthquake\",\"Erroneous\",\"Explosion - Other\",\"Falling Objects\",\"Falling Trees\",\"Fire - All Other\",\"Fire - Caused By Candle\",\"Fire - Caused By Wildfire\",\"Fire - Cooking\",\"Fire - Electrical\",\"Fire - Fire Place\",\"Fire - Kitchen\",\"Fire - Lightning\",\"Fire - Caused  by Smoking (Building)\",\"Fire - Caused  by Smoking (Contents)\",\"Flood\",\"Food Spoilage\",\"Freezing\",\"Freezing - Ice Damage\",\"Golf Cart Physical Damage - Collision\",\"Golf Cart Physical Damage - Other\",\"Hail\",\"Hail Loss/ Roof-Only-Building\",\"Identity Theft\",\"Liability - Personal Injury - Advertising\",\"Liability - Personal Injury - False Arrest or Imprisonment\",\"Liability - Personal Injury - Libel\",\"Liability - Personal Injury - Malicious Prosecution\",\"Liability - Personal Injury - Slander\",\"Lightning\",\"Loss Assessment - Act of God\",\"Loss Assessment - Non Act of God\",\"Med Pay - All other\",\"Med Pay - Animal Liability\",\"Med Pay - Golf Cart\",\"Med Pay - Injury to Tenant\",\"Med Pay - Motor Vehicle\",\"Med Pay - Pollution\",\"Med Pay - Pollution - Mold\",\"Med Pay - Pool\",\"Med Pay - Slip & Fall\",\"Med Pay - Trampoline\",\"Med Pay - Watercraft\",\"Mold\",\"Mysterious Disappearance\",\"PD - Act of Child\",\"PD - All Other\",\"PD - Caused by Animal\",\"PD - Motor Vehicle\",\"PD - Pollution\",\"PD - Pollution - Mold\",\"PD - Water Leak\",\"PD - Watercraft\",\"Pollution\",\"Power Surge\",\"Residential Glass\",\"Riot - Civil Commotion\",\"Sinkhole Damage\",\"Smoke\",\"Theft From Auto\",\"Theft Off Premises\",\"Theft On Premises\",\"Vandalism & M.M.\",\"VMM - Looting\",\"Water - Accidental Discharge\",\"Water - All Other\",\"Water - Backup Sewer or Drains\",\"Water - Caused by Appliances\",\"Water - Foundation\",\"Water - Plumbing Leakage or Break\",\"Water - Roof Leak\",\"Water - Seeping though windows or walls\",\"Water - Solar Panels\",\"Water - Sprinkler Leakage\",\"Wind - Hurricane\",\"Wind - Other\",\"Wind - Tornado\",\"Wind - Tropical Storm\"]},\"propertyDetails\":{\"constructionType\":[\"Masonry 100%\",\"Frame 100%\",\"Superior\",\"Mixed Masonry (25% or Less Frame)\",\"Mixed Masonry (26% or More Frame)\"],\"numStories\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"],\"numUnitsInBuilding\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"occupancyAndUsage\":[{\"occupancy\":\"Owner Occupied\",\"usage\":[\"Primary Residence, Rented\",\"Secondary Residence, Rented\"]},{\"occupancy\":\"Immediate Family\",\"usage\":[\"Primary Residence, Rented\",\"Secondary Residence, Rented\"]},{\"occupancy\":\"Seasonal\",\"usage\":[\"Seasonal Residence, Rented\"]},{\"occupancy\":\"Secondary\",\"usage\":[\"Secondary Residence, Rented\"]},{\"occupancy\":\"Tenant Occupied\",\"usage\":[\"Secondary Residence, Rented\",\"Rental Only\"]}],\"plumbingPipeMaterial\":[\"PVC/CPVC/PE/PEX\",\"Copper\",\"Polybutylene\",\"Galvanized Steel\",\"Not Listed\"],\"poolType\":[\"In Ground\",\"Above Ground\"],\"roofDetails\":{\"cover\":[\"Non FBC Equivalent\",\"FBC Equivalent\",\"Reinforced Concrete Roof Deck\",\"N/A\"],\"deckAttachment\":[\"A - 6d @ 6\\\" / 12\\\"\",\"B - 8d @ 6\\\" / 12\\\"\",\"C - 8d @ 6\\\" / 6\\\"\",\"Reinforced Concrete\",\"Unknown\"],\"material\":[\"Shingles: Asphalt or Composition\",\"Shingles: Wood or Wood Shake\",\"Shingles: Metal\",\"Shingles: Solar\",\"Tile: Flat Slate\",\"Tile: Flat Concrete, Clay or Composite\",\"Tile: S Curve Concrete, Clay or Composite\",\"Tile: Flat Metal\",\"Metal: Light Panels Slate\",\"Metal: Standing Seam\",\"Built-up: Not Ballasted\",\"Built-up: Roof Ballasted\",\"Built-up: Single Ply membrane - Not ballasted/stabilized\",\"Built-up: Single Ply membrane - Ballasted\",\"Built-up: Concrete Fill\",\"Thermoplastic Polyolefin\",\"Other\",\"Asbestos\"],\"shape\":[\"Flat\",\"Gable\",\"Hip\",\"Other\",\"N/A\"],\"wallAttachment\":[\"Toe Nails\",\"Clips\",\"Single Wraps\",\"Double Wraps\",\"Unknown\"]},\"secondaryWaterResistance\":[\"Yes\",\"No\",\"Unknown\"],\"structureType\":[\"Single Family House\",\"Single Family Modular\",\"Duplex\",\"Townhouse\",\"Triplex\",\"Fourplex\",\"Mobile/Manufactured/Park Model/RV\"]}}"
+				}
+			]
+		},
+		{
+			"name": "DF3-CO",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "service",
+							"value": "{{awsService}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "{{awsRegion}}",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "{{accessKey}}",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{rootURL}}/quotes/constrained-values?policyForm=DF3-CO",
+					"host": [
+						"{{rootURL}}"
+					],
+					"path": [
+						"quotes",
+						"constrained-values"
+					],
+					"query": [
+						{
+							"key": "policyForm",
+							"value": "DF3-CO",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "f4719400-ba30-43bc-bfcc-f5ad6c550666",
+					"name": "DF3-CO response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootURL}}/quotes/constrained-values?policyForm=DF3-CO",
+							"host": [
+								"{{rootURL}}"
+							],
+							"path": [
+								"quotes",
+								"constrained-values"
+							],
+							"query": [
+								{
+									"key": "policyForm",
+									"value": "DF3-CO",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "9632",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "connection",
+							"value": "keep-alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "date",
+							"value": "Thu, 21 Dec 2017 14:46:00 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"25a0-fWAY1Xmmn4SxvAR/yRtPHP6UQH8\"",
+							"name": "etag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 572,
+					"body": "{\"coverages\":{\"section1\":{\"aopDeductible\":[\"$500\",\"$1,000\",\"$2,500\",\"$5,000\"],\"hurricaneDeductible\":[\"$500\",\"2% of Coverage A\",\"5% of Coverage A\",\"10% of Coverage A\",\"Ex Wind\"],\"coverageC\":{\"percentOfCoverageA\":[]}},\"optional\":{\"attachedEnclosureOrCarportLimit\":[\"$10,000\",\"$20,000\",\"$30,000\",\"$40,000\",\"$50,000\"]}},\"discounts\":{\"burglarAlarm\":[\"None\",\"Central Monitoring Station\",\"Police Station\"],\"fireAlarm\":[\"None\",\"Central Monitoring Station\",\"Fire Station\"],\"fireSprinkler\":[\"None\",\"Full\"],\"openingProtectionLevel\":[\"None\",\"Basic\",\"Hurricane\"],\"securedCommunity\":[\"No\",\"Single Entry or 24 hr Patrol\",\"24 hr Manned or Passkey Gates\",\"N/A\"]},\"insuranceType\":[\"SFI Florida DF3 CO\"],\"priorCoverage\":{\"carrier\":[\"ACA Home Insurance Corp.\",\"ACE Insurance Company of the Midwest\",\"Addison Insurance Company\",\"Affiliated FM Insurance Company\",\"Allstate Insurance Company\",\"American Automobile Insurance Company\",\"American Bankers Insurance Company of Florida\",\"American Capital Assurance Corp.\",\"American Casualty Company of Reading, Pennsylvania\",\"American Home Assurance Company\",\"American Integrity Insurance Company of Florida\",\"American Mercury Insurance Company\",\"American Modern Insurance Company of Florida, Inc.\",\"American Platinum Property and Casualty Insurance Company\",\"American Reliable Insurance Company\",\"American Security Insurance Company\",\"American Southern Home Insurance Company\",\"American States Insurance Company\",\"American Strategic Insurance Corp.\",\"American Traditions Insurance Company\",\"Amica Mutual Insurance Company\",\"Ark Royal Insurance Company\",\"Armed Forces Insurance Exchange\",\"ASI Assurance Corp.\",\"ASI Preferred Insurance Corp.\",\"Associated Indemnity Corporation\",\"Auto Club Insurance Company of Florida\",\"Auto-Owners Insurance Company\",\"Avatar Property & Casualty Insurance Company\",\"Balboa Insurance Company\",\"Bankers Insurance Company\",\"Capitol Preferred Insurance Company, Inc.\",\"Castle Key Insurance Company\",\"Centauri Insurance\",\"Century National Insurance Company\",\"Charter Oak Fire Insurance Company\",\"Chartis Property Casualty Company\",\"Chubb\",\"Church Mutual Insurance Company\",\"Cincinnati Insurance Company\",\"Citizens Property Insurance Corporation\",\"Companion Property and Casualty Insurance Company\",\"Cooperativa De Seguros Multiples de Puerto Rico, Inc.\",\"Cotton States Mutual Insurance Company\",\"Cypress Property & Casualty Insurance Company\",\"Edison Insurance Company\",\"Electric Insurance Company\",\"Encompass Floridian Insurance Company\",\"Federal Insurance Company\",\"Federated National Insurance Company\",\"Fidelity Fire & Casualty Company\",\"Fidelity National Property and Casualty Insurance Company\",\"Fireman's Fund Insurance Company\",\"First American Property & Casualty Insurance Company\",\"First Community Insurance Company\",\"First Floridian Auto and Home Insurance Company\",\"First Home Insurance Company\",\"First Liberty Insurance Corporation (The)\",\"First National Insurance Company of America\",\"First Protective Insurance Company\",\"Florida Family Insurance Company\",\"Florida Farm Bureau Casualty Insurance Company\",\"Florida Peninsula Insurance Company\",\"Foremost Insurance Company\",\"Frontline Insurance Company\",\"Geo Vera\",\"Great Northern Insurance Company\",\"Guideone Elite Insurance Company\",\"Gulfstream Property and Casualty Insurance Company\",\"Hanover American Insurance Company (The)\",\"Hartford Fire Insurance Company\",\"Heritage Insurance Company\",\"Heritage Property & Casualty homeowners Choice Property & Casualty Insurance Company, Inc.\",\"Homesite Insurance Company of Florida\",\"Horace Mann Insurance Company\",\"IDS Property Casualty Insurance Company\",\"Lexington\",\"Liberty Mutual Fire Insurance Company\",\"Lloyds of London\",\"Markel Insurance Company\",\"Metropolitan Casualty Insurance Company\",\"Modern USA Insurance Company\",\"Nationwide Insurance Company of Florida\",\"New Hampshire Insurance Company\",\"Nova Casualty Company\",\"Ohio Casualty Insurance Company\",\"Old Dominion Insurance Company\",\"Olympus Insurance Company\",\"Omega Insurance Company\",\"People's Trust Insurance Company\",\"Prepared Insurance Company\",\"Privilege Underwriters Reciprocal Exchange\",\"Protection and Indemnity\",\"Ranchers and Farmers Insurance Company\",\"Safe Harbor Insurance Company\",\"SAFECO Insurance Company of America\",\"Safepoint Insurance Company\",\"Safeway Property Insurance Company\",\"Sawgrass Mutual Insurance Company\",\"Security First Insurance Company\",\"Service Insurance Company\",\"Shield Insurance Company\",\"Southern Fidelity Insurance Company\",\"Southern Fidelity Property & Casualty, Inc.\",\"Southern Oak Insurance Company\",\"Southern-Owners Insurance Company\",\"Specialty Insurance Company\",\"St. Johns Insurance Company, Inc.\",\"Star & Shield Insurance Exchange\",\"State Farm Florida Insurance Company\",\"Sunshine State Insurance Company\",\"Teachers Insurance Company\",\"Tower Hill Prime Insurance Company\",\"Transportation Insurance Company\",\"Travelers Indemnity Company of America\",\"United Casualty Insurance Company of America\",\"United Fire and Casualty Company\",\"United Property & Casualty Insurance Company, Inc.\",\"United Services Automobile Association\",\"Universal Insurance Company of North America\",\"Universal Property & Casualty Insurance Company\",\"USAA Casualty Insurance Company\",\"Vigilant Insurance Company\",\"Westfield Insurance Company\",\"Weston\",\"Other\"]},\"priorLosses\":{\"type\":[\"Aircraft\",\"All Other - Act of God\",\"All Other - Non Act of God\",\"Automobile\",\"Bodily Injury - All Other\",\"Bodily Injury - Animal Liability\",\"Bodily Injury - Golf Cart\",\"Bodily Injury - Injury to Tenant\",\"Bodily Injury - Motor Vehicle\",\"Bodily Injury - Off Premises\",\"Bodily Injury - On Premises\",\"Bodily Injury - Pollution\",\"Bodily Injury - Pollution - Mold\",\"Bodily Injury - Pool\",\"Bodily Injury - Slip/Fall\",\"Bodily Injury - Trampoline\",\"Bodily Injury - Watercraft\",\"Burglary\",\"Catastrophic Ground Collapse\",\"Collapse - Non Act of God\",\"Collapse - Other Act of God\",\"Credit Card Loss\",\"Earth Movement\",\"Earthquake\",\"Erroneous\",\"Explosion - Other\",\"Falling Objects\",\"Falling Trees\",\"Fire - All Other\",\"Fire - Caused By Candle\",\"Fire - Caused By Wildfire\",\"Fire - Cooking\",\"Fire - Electrical\",\"Fire - Fire Place\",\"Fire - Kitchen\",\"Fire - Lightning\",\"Fire - Caused  by Smoking (Building)\",\"Fire - Caused  by Smoking (Contents)\",\"Flood\",\"Food Spoilage\",\"Freezing\",\"Freezing - Ice Damage\",\"Golf Cart Physical Damage - Collision\",\"Golf Cart Physical Damage - Other\",\"Hail\",\"Hail Loss/ Roof-Only-Building\",\"Identity Theft\",\"Liability - Personal Injury - Advertising\",\"Liability - Personal Injury - False Arrest or Imprisonment\",\"Liability - Personal Injury - Libel\",\"Liability - Personal Injury - Malicious Prosecution\",\"Liability - Personal Injury - Slander\",\"Lightning\",\"Loss Assessment - Act of God\",\"Loss Assessment - Non Act of God\",\"Med Pay - All other\",\"Med Pay - Animal Liability\",\"Med Pay - Golf Cart\",\"Med Pay - Injury to Tenant\",\"Med Pay - Motor Vehicle\",\"Med Pay - Pollution\",\"Med Pay - Pollution - Mold\",\"Med Pay - Pool\",\"Med Pay - Slip & Fall\",\"Med Pay - Trampoline\",\"Med Pay - Watercraft\",\"Mold\",\"Mysterious Disappearance\",\"PD - Act of Child\",\"PD - All Other\",\"PD - Caused by Animal\",\"PD - Motor Vehicle\",\"PD - Pollution\",\"PD - Pollution - Mold\",\"PD - Water Leak\",\"PD - Watercraft\",\"Pollution\",\"Power Surge\",\"Residential Glass\",\"Riot - Civil Commotion\",\"Sinkhole Damage\",\"Smoke\",\"Theft From Auto\",\"Theft Off Premises\",\"Theft On Premises\",\"Vandalism & M.M.\",\"VMM - Looting\",\"Water - Accidental Discharge\",\"Water - All Other\",\"Water - Backup Sewer or Drains\",\"Water - Caused by Appliances\",\"Water - Foundation\",\"Water - Plumbing Leakage or Break\",\"Water - Roof Leak\",\"Water - Seeping though windows or walls\",\"Water - Solar Panels\",\"Water - Sprinkler Leakage\",\"Wind - Hurricane\",\"Wind - Other\",\"Wind - Tornado\",\"Wind - Tropical Storm\"]},\"propertyDetails\":{\"constructionType\":[\"Masonry 100%\",\"Frame 100%\",\"Superior\",\"Mixed Masonry (25% or Less Frame)\",\"Mixed Masonry (26% or More Frame)\"],\"numStories\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"],\"numUnitsInBuilding\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"occupancyAndUsage\":[{\"occupancy\":\"Owner Occupied\",\"usage\":[\"Primary Residence, Not Rented\",\"Secondary Residence, Not Rented\"]},{\"occupancy\":\"Immediate Family\",\"usage\":[\"Primary Residence, Not Rented\",\"Secondary Residence, Not Rented\"]},{\"occupancy\":\"Seasonal\",\"usage\":[\"Seasonal Residence, Not Rented\"]},{\"occupancy\":\"Secondary\",\"usage\":[\"Secondary Residence, Not Rented\"]}],\"plumbingPipeMaterial\":[\"PVC/CPVC/PE/PEX\",\"Copper\",\"Polybutylene\",\"Galvanized Steel\",\"Not Listed\"],\"poolType\":[\"In Ground\",\"Above Ground\"],\"roofDetails\":{\"cover\":[\"Non FBC Equivalent\",\"FBC Equivalent\",\"Reinforced Concrete Roof Deck\",\"N/A\"],\"deckAttachment\":[\"A - 6d @ 6\\\" / 12\\\"\",\"B - 8d @ 6\\\" / 12\\\"\",\"C - 8d @ 6\\\" / 6\\\"\",\"Reinforced Concrete\",\"Unknown\",\"Wood Deck\",\"Metal Deck\"],\"material\":[\"Shingles: Asphalt or Composition\",\"Shingles: Wood or Wood Shake\",\"Shingles: Metal\",\"Shingles: Solar\",\"Tile: Flat Slate\",\"Tile: Flat Concrete, Clay or Composite\",\"Tile: S Curve Concrete, Clay or Composite\",\"Tile: Flat Metal\",\"Metal: Light Panels Slate\",\"Metal: Standing Seam\",\"Built-up: Not Ballasted\",\"Built-up: Roof Ballasted\",\"Built-up: Single Ply membrane - Not ballasted/stabilized\",\"Built-up: Single Ply membrane - Ballasted\",\"Built-up: Concrete Fill\",\"Thermoplastic Polyolefin\",\"Other\",\"Asbestos\"],\"shape\":[\"Flat\",\"Gable\",\"Hip\",\"Other\"],\"wallAttachment\":[\"Toe Nails\",\"Clips\",\"Single Wraps\",\"Double Wraps\",\"Unknown\"]},\"secondaryWaterResistance\":[\"Yes\",\"No\",\"Unknown\"],\"structureType\":[\"Single Family House\",\"Single Family Modular\",\"Condo - 2 to 4 Units\",\"Condo - 5+ Units\",\"Duplex\",\"Townhouse\",\"Triplex\",\"Fourplex\",\"Mobile/Manufactured/Park Model/RV\"]}}"
+				}
+			]
+		},
+		{
+			"name": "DF3-CL",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "service",
+							"value": "{{awsService}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "{{awsRegion}}",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "{{accessKey}}",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{rootURL}}/quotes/constrained-values?policyForm=DF3-CL",
+					"host": [
+						"{{rootURL}}"
+					],
+					"path": [
+						"quotes",
+						"constrained-values"
+					],
+					"query": [
+						{
+							"key": "policyForm",
+							"value": "DF3-CL",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "e37bbbfb-2763-496b-a385-1c1418fca2ae",
+					"name": "DF3-CL response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootURL}}/quotes/constrained-values?policyForm=DF3-CL",
+							"host": [
+								"{{rootURL}}"
+							],
+							"path": [
+								"quotes",
+								"constrained-values"
+							],
+							"query": [
+								{
+									"key": "policyForm",
+									"value": "DF3-CL",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "9694",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "connection",
+							"value": "keep-alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "date",
+							"value": "Thu, 21 Dec 2017 14:46:40 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"25de-djGSMDvrdYlKeQMi2rKJplrkRjA\"",
+							"name": "etag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 371,
+					"body": "{\"coverages\":{\"section1\":{\"aopDeductible\":[\"$500\",\"$1,000\",\"$2,500\",\"$5,000\"],\"hurricaneDeductible\":[\"$500\",\"2% of Coverage A\",\"5% of Coverage A\",\"10% of Coverage A\",\"Ex Wind\"],\"coverageC\":{\"percentOfCoverageA\":[]}},\"optional\":{\"attachedEnclosureOrCarportLimit\":[\"$10,000\",\"$20,000\",\"$30,000\",\"$40,000\",\"$50,000\"]}},\"discounts\":{\"burglarAlarm\":[\"None\",\"Central Monitoring Station\",\"Police Station\"],\"fireAlarm\":[\"None\",\"Central Monitoring Station\",\"Fire Station\"],\"fireSprinkler\":[\"None\",\"Full\"],\"openingProtectionLevel\":[\"None\",\"Basic\",\"Hurricane\"],\"securedCommunity\":[\"No\",\"Single Entry or 24 hr Patrol\",\"24 hr Manned or Passkey Gates\",\"N/A\"]},\"insuranceType\":[\"SFI Florida DF3 CL\"],\"priorCoverage\":{\"carrier\":[\"ACA Home Insurance Corp.\",\"ACE Insurance Company of the Midwest\",\"Addison Insurance Company\",\"Affiliated FM Insurance Company\",\"Allstate Insurance Company\",\"American Automobile Insurance Company\",\"American Bankers Insurance Company of Florida\",\"American Capital Assurance Corp.\",\"American Casualty Company of Reading, Pennsylvania\",\"American Home Assurance Company\",\"American Integrity Insurance Company of Florida\",\"American Mercury Insurance Company\",\"American Modern Insurance Company of Florida, Inc.\",\"American Platinum Property and Casualty Insurance Company\",\"American Reliable Insurance Company\",\"American Security Insurance Company\",\"American Southern Home Insurance Company\",\"American States Insurance Company\",\"American Strategic Insurance Corp.\",\"American Traditions Insurance Company\",\"Amica Mutual Insurance Company\",\"Ark Royal Insurance Company\",\"Armed Forces Insurance Exchange\",\"ASI Assurance Corp.\",\"ASI Preferred Insurance Corp.\",\"Associated Indemnity Corporation\",\"Auto Club Insurance Company of Florida\",\"Auto-Owners Insurance Company\",\"Avatar Property & Casualty Insurance Company\",\"Balboa Insurance Company\",\"Bankers Insurance Company\",\"Capitol Preferred Insurance Company, Inc.\",\"Castle Key Insurance Company\",\"Centauri Insurance\",\"Century National Insurance Company\",\"Charter Oak Fire Insurance Company\",\"Chartis Property Casualty Company\",\"Chubb\",\"Church Mutual Insurance Company\",\"Cincinnati Insurance Company\",\"Citizens Property Insurance Corporation\",\"Companion Property and Casualty Insurance Company\",\"Cooperativa De Seguros Multiples de Puerto Rico, Inc.\",\"Cotton States Mutual Insurance Company\",\"Cypress Property & Casualty Insurance Company\",\"Edison Insurance Company\",\"Electric Insurance Company\",\"Encompass Floridian Insurance Company\",\"Federal Insurance Company\",\"Federated National Insurance Company\",\"Fidelity Fire & Casualty Company\",\"Fidelity National Property and Casualty Insurance Company\",\"Fireman's Fund Insurance Company\",\"First American Property & Casualty Insurance Company\",\"First Community Insurance Company\",\"First Floridian Auto and Home Insurance Company\",\"First Home Insurance Company\",\"First Liberty Insurance Corporation (The)\",\"First National Insurance Company of America\",\"First Protective Insurance Company\",\"Florida Family Insurance Company\",\"Florida Farm Bureau Casualty Insurance Company\",\"Florida Peninsula Insurance Company\",\"Foremost Insurance Company\",\"Frontline Insurance Company\",\"Geo Vera\",\"Great Northern Insurance Company\",\"Guideone Elite Insurance Company\",\"Gulfstream Property and Casualty Insurance Company\",\"Hanover American Insurance Company (The)\",\"Hartford Fire Insurance Company\",\"Heritage Insurance Company\",\"Heritage Property & Casualty homeowners Choice Property & Casualty Insurance Company, Inc.\",\"Homesite Insurance Company of Florida\",\"Horace Mann Insurance Company\",\"IDS Property Casualty Insurance Company\",\"Lexington\",\"Liberty Mutual Fire Insurance Company\",\"Lloyds of London\",\"Markel Insurance Company\",\"Metropolitan Casualty Insurance Company\",\"Modern USA Insurance Company\",\"Nationwide Insurance Company of Florida\",\"New Hampshire Insurance Company\",\"Nova Casualty Company\",\"Ohio Casualty Insurance Company\",\"Old Dominion Insurance Company\",\"Olympus Insurance Company\",\"Omega Insurance Company\",\"People's Trust Insurance Company\",\"Prepared Insurance Company\",\"Privilege Underwriters Reciprocal Exchange\",\"Protection and Indemnity\",\"Ranchers and Farmers Insurance Company\",\"Safe Harbor Insurance Company\",\"SAFECO Insurance Company of America\",\"Safepoint Insurance Company\",\"Safeway Property Insurance Company\",\"Sawgrass Mutual Insurance Company\",\"Security First Insurance Company\",\"Service Insurance Company\",\"Shield Insurance Company\",\"Southern Fidelity Insurance Company\",\"Southern Fidelity Property & Casualty, Inc.\",\"Southern Oak Insurance Company\",\"Southern-Owners Insurance Company\",\"Specialty Insurance Company\",\"St. Johns Insurance Company, Inc.\",\"Star & Shield Insurance Exchange\",\"State Farm Florida Insurance Company\",\"Sunshine State Insurance Company\",\"Teachers Insurance Company\",\"Tower Hill Prime Insurance Company\",\"Transportation Insurance Company\",\"Travelers Indemnity Company of America\",\"United Casualty Insurance Company of America\",\"United Fire and Casualty Company\",\"United Property & Casualty Insurance Company, Inc.\",\"United Services Automobile Association\",\"Universal Insurance Company of North America\",\"Universal Property & Casualty Insurance Company\",\"USAA Casualty Insurance Company\",\"Vigilant Insurance Company\",\"Westfield Insurance Company\",\"Weston\",\"Other\"]},\"priorLosses\":{\"type\":[\"Aircraft\",\"All Other - Act of God\",\"All Other - Non Act of God\",\"Automobile\",\"Bodily Injury - All Other\",\"Bodily Injury - Animal Liability\",\"Bodily Injury - Golf Cart\",\"Bodily Injury - Injury to Tenant\",\"Bodily Injury - Motor Vehicle\",\"Bodily Injury - Off Premises\",\"Bodily Injury - On Premises\",\"Bodily Injury - Pollution\",\"Bodily Injury - Pollution - Mold\",\"Bodily Injury - Pool\",\"Bodily Injury - Slip/Fall\",\"Bodily Injury - Trampoline\",\"Bodily Injury - Watercraft\",\"Burglary\",\"Catastrophic Ground Collapse\",\"Collapse - Non Act of God\",\"Collapse - Other Act of God\",\"Credit Card Loss\",\"Earth Movement\",\"Earthquake\",\"Erroneous\",\"Explosion - Other\",\"Falling Objects\",\"Falling Trees\",\"Fire - All Other\",\"Fire - Caused By Candle\",\"Fire - Caused By Wildfire\",\"Fire - Cooking\",\"Fire - Electrical\",\"Fire - Fire Place\",\"Fire - Kitchen\",\"Fire - Lightning\",\"Fire - Caused  by Smoking (Building)\",\"Fire - Caused  by Smoking (Contents)\",\"Flood\",\"Food Spoilage\",\"Freezing\",\"Freezing - Ice Damage\",\"Golf Cart Physical Damage - Collision\",\"Golf Cart Physical Damage - Other\",\"Hail\",\"Hail Loss/ Roof-Only-Building\",\"Identity Theft\",\"Liability - Personal Injury - Advertising\",\"Liability - Personal Injury - False Arrest or Imprisonment\",\"Liability - Personal Injury - Libel\",\"Liability - Personal Injury - Malicious Prosecution\",\"Liability - Personal Injury - Slander\",\"Lightning\",\"Loss Assessment - Act of God\",\"Loss Assessment - Non Act of God\",\"Med Pay - All other\",\"Med Pay - Animal Liability\",\"Med Pay - Golf Cart\",\"Med Pay - Injury to Tenant\",\"Med Pay - Motor Vehicle\",\"Med Pay - Pollution\",\"Med Pay - Pollution - Mold\",\"Med Pay - Pool\",\"Med Pay - Slip & Fall\",\"Med Pay - Trampoline\",\"Med Pay - Watercraft\",\"Mold\",\"Mysterious Disappearance\",\"PD - Act of Child\",\"PD - All Other\",\"PD - Caused by Animal\",\"PD - Motor Vehicle\",\"PD - Pollution\",\"PD - Pollution - Mold\",\"PD - Water Leak\",\"PD - Watercraft\",\"Pollution\",\"Power Surge\",\"Residential Glass\",\"Riot - Civil Commotion\",\"Sinkhole Damage\",\"Smoke\",\"Theft From Auto\",\"Theft Off Premises\",\"Theft On Premises\",\"Vandalism & M.M.\",\"VMM - Looting\",\"Water - Accidental Discharge\",\"Water - All Other\",\"Water - Backup Sewer or Drains\",\"Water - Caused by Appliances\",\"Water - Foundation\",\"Water - Plumbing Leakage or Break\",\"Water - Roof Leak\",\"Water - Seeping though windows or walls\",\"Water - Solar Panels\",\"Water - Sprinkler Leakage\",\"Wind - Hurricane\",\"Wind - Other\",\"Wind - Tornado\",\"Wind - Tropical Storm\"]},\"propertyDetails\":{\"constructionType\":[\"Masonry 100%\",\"Frame 100%\",\"Superior\",\"Mixed Masonry (25% or Less Frame)\",\"Mixed Masonry (26% or More Frame)\"],\"numStories\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"],\"numUnitsInBuilding\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"occupancyAndUsage\":[{\"occupancy\":\"Owner Occupied\",\"usage\":[\"Primary Residence, Rented\",\"Secondary Residence, Rented\"]},{\"occupancy\":\"Immediate Family\",\"usage\":[\"Primary Residence, Rented\",\"Secondary Residence, Rented\"]},{\"occupancy\":\"Seasonal\",\"usage\":[\"Seasonal Residence, Rented\"]},{\"occupancy\":\"Secondary\",\"usage\":[\"Secondary Residence, Rented\"]},{\"occupancy\":\"Tenant Occupied\",\"usage\":[\"Secondary Residence, Rented\",\"Rental Only\"]}],\"plumbingPipeMaterial\":[\"PVC/CPVC/PE/PEX\",\"Copper\",\"Polybutylene\",\"Galvanized Steel\",\"Not Listed\"],\"poolType\":[\"In Ground\",\"Above Ground\"],\"roofDetails\":{\"cover\":[\"Non FBC Equivalent\",\"FBC Equivalent\",\"Reinforced Concrete Roof Deck\",\"N/A\"],\"deckAttachment\":[\"A - 6d @ 6\\\" / 12\\\"\",\"B - 8d @ 6\\\" / 12\\\"\",\"C - 8d @ 6\\\" / 6\\\"\",\"Reinforced Concrete\",\"Unknown\",\"Metal Deck\",\"Wood Deck\"],\"material\":[\"Shingles: Asphalt or Composition\",\"Shingles: Wood or Wood Shake\",\"Shingles: Metal\",\"Shingles: Solar\",\"Tile: Flat Slate\",\"Tile: Flat Concrete, Clay or Composite\",\"Tile: S Curve Concrete, Clay or Composite\",\"Tile: Flat Metal\",\"Metal: Light Panels Slate\",\"Metal: Standing Seam\",\"Built-up: Not Ballasted\",\"Built-up: Roof Ballasted\",\"Built-up: Single Ply membrane - Not ballasted/stabilized\",\"Built-up: Single Ply membrane - Ballasted\",\"Built-up: Concrete Fill\",\"Thermoplastic Polyolefin\",\"Other\",\"Asbestos\"],\"shape\":[\"Flat\",\"Gable\",\"Hip\",\"Other\"],\"wallAttachment\":[\"Toe Nails\",\"Clips\",\"Single Wraps\",\"Double Wraps\",\"Unknown\"]},\"secondaryWaterResistance\":[\"Yes\",\"No\",\"Unknown\"],\"structureType\":[\"Single Family House\",\"Single Family Modular\",\"Condo - 2 to 4 Units\",\"Condo - 5+ Units\",\"Duplex\",\"Townhouse\",\"Triplex\",\"Fourplex\",\"Mobile/Manufactured/Park Model/RV\"]}}"
+				}
+			]
+		}
+	]
+}

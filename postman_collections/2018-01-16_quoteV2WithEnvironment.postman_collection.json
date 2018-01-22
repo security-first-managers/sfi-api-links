@@ -1,0 +1,284 @@
+{
+	"info": {
+		"name": "2018/01/16 - Quote V2 with environment",
+		"_postman_id": "c5a18d4b-91e1-a28b-409f-127506ee0113",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createBindable HO3",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "accessKey",
+							"value": "{{accessKey}}",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "{{awsService}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "{{awsRegion}}",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lob\": \"HO\",\n    \"agentIdentifier\": \"X06088\",\n    \"identifierType\": \"username\",\n    \"insuranceType\": \"SFI Florida HO3\",\n    \"effectiveOn\": \"2018-01-16\",\n    \"insuredDetails\": {\n        \"firstName\": \"Joe\",\n        \"lastName\": \"Cool\",\n        \"mailingAddress\": {\n            \"street\": \"367 Burnt Pine Dr\",\n            \"zip\": \"34119\"\n        },\n        \"phone\": {\n            \"number\": \"919-919-9191\",\n            \"type\": \"Home\"\n        },\n        \"email\": \"joecool@mailinator.com\",\n        \"dob\": \"1995-05-15\"\n    },\n    \"propertyDetails\": {\n        \"address\": {\n            \"street\": \"367 Burnt Pine Dr\",\n            \"zip\": \"34119\"\n        },\n        \"constructionType\": \"Masonry 100%\",\n        \"occupancy\": \"Owner Occupied\",\n        \"structureType\": \"Single Family House\"\n    },\n    \"discounts\": {\n        \"is1000FeetFromFireHydrant\": true,\n        \"securedCommunity\": \"No\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{rootURL}}/quotes",
+					"host": [
+						"{{rootURL}}"
+					],
+					"path": [
+						"quotes"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "3214f65c-b088-4c03-9432-50bc6835ccff",
+					"name": "createBindable HO3 response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lob\": \"HO\",\n    \"agentIdentifier\": \"X06088\",\n    \"identifierType\": \"username\",\n    \"insuranceType\": \"SFI Florida HO3\",\n    \"effectiveOn\": \"2018-01-16\",\n    \"insuredDetails\": {\n        \"firstName\": \"Joe\",\n        \"lastName\": \"Cool\",\n        \"mailingAddress\": {\n            \"street\": \"367 Burnt Pine Dr\",\n            \"zip\": \"34119\"\n        },\n        \"phone\": {\n            \"number\": \"919-919-9191\",\n            \"type\": \"Home\"\n        },\n        \"email\": \"joecool@mailinator.com\",\n        \"dob\": \"1995-05-15\"\n    },\n    \"propertyDetails\": {\n        \"address\": {\n            \"street\": \"367 Burnt Pine Dr\",\n            \"zip\": \"34119\"\n        },\n        \"constructionType\": \"Masonry 100%\",\n        \"occupancy\": \"Owner Occupied\",\n        \"structureType\": \"Single Family House\"\n    },\n    \"discounts\": {\n        \"is1000FeetFromFireHydrant\": true,\n        \"securedCommunity\": \"No\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{rootURL}}/quotes",
+							"host": [
+								"{{rootURL}}"
+							],
+							"path": [
+								"quotes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "1589",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "connection",
+							"value": "keep-alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 17 Jan 2018 19:29:38 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"635-nTkDtFR6XfY8K7rr/7ccanDxNd8:dtagent10133171206150114gaje:dtagent10133171206150114gaje\"",
+							"name": "etag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Mon Jan 18 2038 22:14:07 GMT-0500 (EST)",
+							"httpOnly": false,
+							"domain": "securityfirstflorida.com",
+							"path": "/",
+							"secure": false,
+							"value": "1$5D484E7E85106E3F709BF3058937BD77|RUM+Default+Application|1",
+							"key": "dtCookie"
+						}
+					],
+					"responseTime": 24612,
+					"body": "{\"id\":\"P001502636\",\"capacity\":\"Open\",\"coverages\":{\"optional\":{\"attachedEnclosureOrCarportLimit\":\"$0\",\"hasWaterBackupSumpOverflow\":false,\"hasPersonalInjury\":false,\"hasDogLiability\":false,\"identityTheft\":\"Included\"},\"section1\":{\"aopDeductible\":\"$1,000\",\"coverageA\":292000,\"coverageB\":5840,\"coverageC\":{\"dollarAmount\":146000,\"percentOfCoverageA\":50},\"coverageD\":29200,\"hasPersonalPropertyReplacementCost\":true,\"hurricaneDeductible\":\"2% of Coverage A\",\"limitedFungi\":\"$10,000 per loss/$50,000 policy total\",\"ordinanceOrLaw\":73000},\"section2\":{\"coverageE\":\"$100,000\",\"coverageF\":1000}},\"discounts\":{\"is1000FeetFromFireHydrant\":true,\"securedCommunity\":\"No\"},\"effectiveOn\":\"2018-01-16\",\"insuranceType\":\"SFI Florida HO3\",\"insuredDetails\":{\"dob\":\"1995-05-15\",\"email\":\"joecool@mailinator.com\",\"firstName\":\"Joe\",\"lastName\":\"Cool\",\"mailingAddress\":{\"city\":\"NAPLES\",\"county\":\"COLLIER\",\"location\":{\"latitude\":26.266892,\"longitude\":-81.689706},\"state\":\"FL\",\"street\":\"367 BURNT PINE DR\",\"zip\":\"34119\"},\"phone\":{\"number\":\"9199199191\",\"type\":\"Home\"}},\"lob\":\"HO\",\"policyForm\":\"HO3\",\"propertyDetails\":{\"address\":{\"city\":\"NAPLES\",\"county\":\"COLLIER\",\"location\":{\"latitude\":26.266892,\"longitude\":-81.689706},\"state\":\"FL\",\"street\":\"367 BURNT PINE DR\",\"zip\":\"34119\"},\"constructionType\":\"Masonry 100%\",\"numStories\":\"1\",\"occupancy\":\"Owner Occupied\",\"roofDetails\":{\"lastYearReno\":2003,\"shape\":\"Hip\"},\"squareFootage\":2241,\"structureType\":\"Single Family House\",\"usage\":\"Primary Residence, Not Rented\",\"yearBuilt\":2002},\"rate\":{\"subTotal\":2443,\"premiumTotal\":2470},\"agentIdentifier\":\"X06088\",\"identifierType\":\"username\"}"
+				}
+			]
+		},
+		{
+			"name": "getConstrainedValues HO3",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "service",
+							"value": "{{awsService}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "{{awsRegion}}",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "{{accessKey}}",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{rootURL}}/quotes/constrained-values?policyForm=HO3",
+					"host": [
+						"{{rootURL}}"
+					],
+					"path": [
+						"quotes",
+						"constrained-values"
+					],
+					"query": [
+						{
+							"key": "policyForm",
+							"value": "HO3",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "5f72badf-3513-4b52-9616-4563ec976d57",
+					"name": "getConstrainedValues HO3 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{rootURL}}/quotes/constrained-values?policyForm=HO3",
+							"host": [
+								"{{rootURL}}"
+							],
+							"path": [
+								"quotes",
+								"constrained-values"
+							],
+							"query": [
+								{
+									"key": "policyForm",
+									"value": "HO3",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10175",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jan 2018 15:32:51 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27bf-WVNwA7jzEw95v6R/iKTySzZbu+I\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 499,
+					"body": "{\"coverages\":{\"section1\":{\"aopDeductible\":[\"$500\",\"$1,000\",\"$2,500\",\"$5,000\"],\"hurricaneDeductible\":[\"$500\",\"2% of Coverage A\",\"5% of Coverage A\",\"10% of Coverage A\",\"Ex-Wind\"],\"coverageC\":{\"percentOfCoverageA\":[{\"percent\":0,\"string\":\"0% of Coverage A\"},{\"percent\":25,\"string\":\"25% of Coverage A\"},{\"percent\":30,\"string\":\"30% of Coverage A\"},{\"percent\":35,\"string\":\"35% of Coverage A\"},{\"percent\":40,\"string\":\"40% of Coverage A\"},{\"percent\":45,\"string\":\"45% of Coverage A\"},{\"percent\":50,\"string\":\"50% of Coverage A\"},{\"percent\":55,\"string\":\"55% of Coverage A\"},{\"percent\":60,\"string\":\"60% of Coverage A\"},{\"percent\":65,\"string\":\"65% of Coverage A\"},{\"percent\":70,\"string\":\"70% of Coverage A\"},{\"percent\":75,\"string\":\"75% of Coverage A\"}]}},\"section2\":{\"coverageE\":[\"$100,000\",\"$200,000\",\"$300,000\",\"$500,000\"]},\"optional\":{\"attachedEnclosureOrCarportLimit\":[\"$0\",\"$5,000\",\"$10,000\",\"$15,000\",\"$20,000\",\"$25,000\",\"$30,000\",\"$35,000\",\"$40,000\",\"$45,000\",\"$50,000\",\"$55,000\",\"$60,000\",\"$65,000\",\"$70,000\",\"$75,000\"]}},\"discounts\":{\"burglarAlarm\":[\"None\",\"Central Monitoring Station\",\"Police Station\"],\"fireAlarm\":[\"None\",\"Central Monitoring Station\",\"Fire Station\"],\"fireSprinkler\":[\"None\",\"Full\"],\"openingProtectionLevel\":[\"None\",\"Basic\",\"Hurricane\"],\"securedCommunity\":[\"No\",\"Single Entry or 24 hr Patrol\",\"24 hr Manned or Passkey Gates\",\"N/A\"]},\"insuranceType\":[\"SFI Florida HO3\"],\"priorCoverage\":{\"carrier\":[\"ACA Home Insurance Corp.\",\"ACE Insurance Company of the Midwest\",\"Addison Insurance Company\",\"Affiliated FM Insurance Company\",\"Allstate Insurance Company\",\"American Automobile Insurance Company\",\"American Bankers Insurance Company of Florida\",\"American Capital Assurance Corp.\",\"American Casualty Company of Reading, Pennsylvania\",\"American Home Assurance Company\",\"American Integrity Insurance Company of Florida\",\"American Mercury Insurance Company\",\"American Modern Insurance Company of Florida, Inc.\",\"American Platinum Property and Casualty Insurance Company\",\"American Reliable Insurance Company\",\"American Security Insurance Company\",\"American Southern Home Insurance Company\",\"American States Insurance Company\",\"American Strategic Insurance Corp.\",\"American Traditions Insurance Company\",\"Amica Mutual Insurance Company\",\"Ark Royal Insurance Company\",\"Armed Forces Insurance Exchange\",\"ASI Assurance Corp.\",\"ASI Preferred Insurance Corp.\",\"Associated Indemnity Corporation\",\"Auto Club Insurance Company of Florida\",\"Auto-Owners Insurance Company\",\"Avatar Property & Casualty Insurance Company\",\"Balboa Insurance Company\",\"Bankers Insurance Company\",\"Capitol Preferred Insurance Company, Inc.\",\"Castle Key Insurance Company\",\"Centauri Insurance\",\"Century National Insurance Company\",\"Charter Oak Fire Insurance Company\",\"Chartis Property Casualty Company\",\"Chubb\",\"Church Mutual Insurance Company\",\"Cincinnati Insurance Company\",\"Citizens Property Insurance Corporation\",\"Companion Property and Casualty Insurance Company\",\"Cooperativa De Seguros Multiples de Puerto Rico, Inc.\",\"Cotton States Mutual Insurance Company\",\"Cypress Property & Casualty Insurance Company\",\"Edison Insurance Company\",\"Electric Insurance Company\",\"Encompass Floridian Insurance Company\",\"Federal Insurance Company\",\"Federated National Insurance Company\",\"Fidelity Fire & Casualty Company\",\"Fidelity National Property and Casualty Insurance Company\",\"Fireman's Fund Insurance Company\",\"First American Property & Casualty Insurance Company\",\"First Community Insurance Company\",\"First Floridian Auto and Home Insurance Company\",\"First Home Insurance Company\",\"First Liberty Insurance Corporation (The)\",\"First National Insurance Company of America\",\"First Protective Insurance Company\",\"Florida Family Insurance Company\",\"Florida Farm Bureau Casualty Insurance Company\",\"Florida Peninsula Insurance Company\",\"Foremost Insurance Company\",\"Frontline Insurance Company\",\"Geo Vera\",\"Great Northern Insurance Company\",\"Guideone Elite Insurance Company\",\"Gulfstream Property and Casualty Insurance Company\",\"Hanover American Insurance Company (The)\",\"Hartford Fire Insurance Company\",\"Heritage Insurance Company\",\"Heritage Property & Casualty homeowners Choice Property & Casualty Insurance Company, Inc.\",\"Homesite Insurance Company of Florida\",\"Horace Mann Insurance Company\",\"IDS Property Casualty Insurance Company\",\"Lexington\",\"Liberty Mutual Fire Insurance Company\",\"Lloyds of London\",\"Markel Insurance Company\",\"Metropolitan Casualty Insurance Company\",\"Modern USA Insurance Company\",\"Nationwide Insurance Company of Florida\",\"New Hampshire Insurance Company\",\"Nova Casualty Company\",\"Ohio Casualty Insurance Company\",\"Old Dominion Insurance Company\",\"Olympus Insurance Company\",\"Omega Insurance Company\",\"People's Trust Insurance Company\",\"Prepared Insurance Company\",\"Privilege Underwriters Reciprocal Exchange\",\"Protection and Indemnity\",\"Ranchers and Farmers Insurance Company\",\"Safe Harbor Insurance Company\",\"SAFECO Insurance Company of America\",\"Safepoint Insurance Company\",\"Safeway Property Insurance Company\",\"Sawgrass Mutual Insurance Company\",\"Security First Insurance Company\",\"Service Insurance Company\",\"Shield Insurance Company\",\"Southern Fidelity Insurance Company\",\"Southern Fidelity Property & Casualty, Inc.\",\"Southern Oak Insurance Company\",\"Southern-Owners Insurance Company\",\"Specialty Insurance Company\",\"St. Johns Insurance Company, Inc.\",\"Star & Shield Insurance Exchange\",\"State Farm Florida Insurance Company\",\"Sunshine State Insurance Company\",\"Teachers Insurance Company\",\"Tower Hill Prime Insurance Company\",\"Transportation Insurance Company\",\"Travelers Indemnity Company of America\",\"United Casualty Insurance Company of America\",\"United Fire and Casualty Company\",\"United Property & Casualty Insurance Company, Inc.\",\"United Services Automobile Association\",\"Universal Insurance Company of North America\",\"Universal Property & Casualty Insurance Company\",\"USAA Casualty Insurance Company\",\"Vigilant Insurance Company\",\"Westfield Insurance Company\",\"Weston\",\"Other\"]},\"priorLosses\":{\"type\":[\"Aircraft\",\"All Other - Act of God\",\"All Other - Non Act of God\",\"Automobile\",\"Bodily Injury - All Other\",\"Bodily Injury - Animal Liability\",\"Bodily Injury - Golf Cart\",\"Bodily Injury - Injury to Tenant\",\"Bodily Injury - Motor Vehicle\",\"Bodily Injury - Off Premises\",\"Bodily Injury - On Premises\",\"Bodily Injury - Pollution\",\"Bodily Injury - Pollution - Mold\",\"Bodily Injury - Pool\",\"Bodily Injury - Slip/Fall\",\"Bodily Injury - Trampoline\",\"Bodily Injury - Watercraft\",\"Burglary\",\"Catastrophic Ground Collapse\",\"Collapse - Non Act of God\",\"Collapse - Other Act of God\",\"Credit Card Loss\",\"Earth Movement\",\"Earthquake\",\"Erroneous\",\"Explosion - Other\",\"Falling Objects\",\"Falling Trees\",\"Fire - All Other\",\"Fire - Caused By Candle\",\"Fire - Caused By Wildfire\",\"Fire - Cooking\",\"Fire - Electrical\",\"Fire - Fire Place\",\"Fire - Kitchen\",\"Fire - Lightning\",\"Fire - Caused  by Smoking (Building)\",\"Fire - Caused  by Smoking (Contents)\",\"Flood\",\"Food Spoilage\",\"Freezing\",\"Freezing - Ice Damage\",\"Golf Cart Physical Damage - Collision\",\"Golf Cart Physical Damage - Other\",\"Hail\",\"Hail Loss/ Roof-Only-Building\",\"Identity Theft\",\"Liability - Personal Injury - Advertising\",\"Liability - Personal Injury - False Arrest or Imprisonment\",\"Liability - Personal Injury - Libel\",\"Liability - Personal Injury - Malicious Prosecution\",\"Liability - Personal Injury - Slander\",\"Lightning\",\"Loss Assessment - Act of God\",\"Loss Assessment - Non Act of God\",\"Med Pay - All other\",\"Med Pay - Animal Liability\",\"Med Pay - Golf Cart\",\"Med Pay - Injury to Tenant\",\"Med Pay - Motor Vehicle\",\"Med Pay - Pollution\",\"Med Pay - Pollution - Mold\",\"Med Pay - Pool\",\"Med Pay - Slip & Fall\",\"Med Pay - Trampoline\",\"Med Pay - Watercraft\",\"Mold\",\"Mysterious Disappearance\",\"PD - Act of Child\",\"PD - All Other\",\"PD - Caused by Animal\",\"PD - Motor Vehicle\",\"PD - Pollution\",\"PD - Pollution - Mold\",\"PD - Water Leak\",\"PD - Watercraft\",\"Pollution\",\"Power Surge\",\"Residential Glass\",\"Riot - Civil Commotion\",\"Sinkhole Damage\",\"Smoke\",\"Theft From Auto\",\"Theft Off Premises\",\"Theft On Premises\",\"Vandalism & M.M.\",\"VMM - Looting\",\"Water - Accidental Discharge\",\"Water - All Other\",\"Water - Backup Sewer or Drains\",\"Water - Caused by Appliances\",\"Water - Foundation\",\"Water - Plumbing Leakage or Break\",\"Water - Roof Leak\",\"Water - Seeping though windows or walls\",\"Water - Solar Panels\",\"Water - Sprinkler Leakage\",\"Wind - Hurricane\",\"Wind - Other\",\"Wind - Tornado\",\"Wind - Tropical Storm\"]},\"propertyDetails\":{\"constructionType\":[\"Masonry 100%\",\"Frame 100%\",\"Superior\",\"Mixed Masonry (25% or Less Frame)\",\"Mixed Masonry (26% or More Frame)\"],\"numStories\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"],\"numUnitsInBuilding\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"occupancyAndUsage\":[{\"occupancy\":\"Owner Occupied\",\"usage\":[\"Primary Residence, Not Rented\",\"Secondary Residence, Not Rented\"]},{\"occupancy\":\"Immediate Family\",\"usage\":[\"N/A\"]},{\"occupancy\":\"Seasonal\",\"usage\":[\"Seasonal Residence, Not Rented\"]},{\"occupancy\":\"Secondary\",\"usage\":[\"Secondary Residence, Not Rented\"]}],\"plumbingPipeMaterial\":[\"PVC/CPVC/PE/PEX\",\"Copper\",\"Polybutylene\",\"Galvanized Steel\",\"Not Listed\"],\"poolType\":[\"In Ground\",\"Above Ground\"],\"roofDetails\":{\"cover\":[\"Non FBC Equivalent\",\"FBC Equivalent\",\"Reinforced Concrete Roof Deck\"],\"deckAttachment\":[\"A - 6d @ 6\\\" / 12\\\"\",\"B - 8d @ 6\\\" / 12\\\"\",\"C - 8d @ 6\\\" / 6\\\"\",\"Reinforced Concrete\",\"Unknown\"],\"material\":[\"Shingles: Asphalt or Composition\",\"Shingles: Wood or Wood Shake\",\"Shingles: Metal\",\"Shingles: Solar\",\"Tile: Flat Slate\",\"Tile: Flat Concrete, Clay or Composite\",\"Tile: S Curve Concrete, Clay or Composite\",\"Tile: Flat Metal\",\"Metal: Light Panels Slate\",\"Metal: Standing Seam\",\"Built-up: Not Ballasted\",\"Built-up: Roof Ballasted\",\"Built-up: Single Ply membrane - Not ballasted/stabilized\",\"Built-up: Single Ply membrane - Ballasted\",\"Built-up: Concrete Fill\",\"Thermoplastic Polyolefin\",\"Other\",\"Asbestos\"],\"shape\":[\"Flat\",\"Gable\",\"Hip\",\"Other\"],\"wallAttachment\":[\"Toe Nails\",\"Clips\",\"Single Wraps\",\"Double Wraps\",\"Unknown\"]},\"secondaryWaterResistance\":[\"Yes\",\"No\",\"Unknown\"],\"structureType\":[\"Single Family House\",\"Single Family Modular\",\"Mobile/Manufactured/Park Model/RV\",\"Townhouse\",\"Duplex\"]}}"
+				}
+			]
+		}
+	]
+}
