@@ -1,0 +1,90 @@
+{
+	"info": {
+		"name": "test-binding-xact-verification-tabular",
+		"_postman_id": "30e85120-2124-4a29-adfc-b6a0fe209ce4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Verification - Tabular",
+			"description": "",
+			"item": [
+				{
+					"name": "aws-dev",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "aws-prod",
+					"item": [],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "disabled_tests",
+			"item": [
+				{
+					"name": "Create claim-assignment with unknown desk adjuster",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "89b10543-0a5e-405d-8c4b-51c46922cf2c",
+								"type": "text/javascript",
+								"exec": [
+									"// This test is currently disabled due to the fact that there is a (temporary) container auth token in place,",
+									"// and we don't want to put the value of that auth token into test code.",
+									"",
+									"pm.test(\"Status code is 500\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});",
+									"",
+									"pm.test(\"Message is desk adjuster match error\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.eql(\"Could not find an exact user match for desk adjuster assignment\");",
+									"});",
+									"",
+									"pm.test(\"Request policyNumber matches tabular data value\", function () {",
+									"    var requestJsonData = JSON.parse(request.data);",
+									"    pm.expect(requestJsonData.policySummary.policyNumber).to.eql(data[\"policy_number\"]);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{container_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"claimSummary\": {\n\t\t\"lossDate\": \"2017-09-11\",\n\t\t\"receivedDate\": \"2017-09-11\",\n\t\t\"descriptionOfDamage\": \"Description Of Damage Value\",\n\t\t\"lossCause\": \"Water - All Other\",\n\t\t\"relatedCatastrophe\": \"805\",\n\t\t\"claimNumber\": \"1234567890\",\n\t\t\"deskAdjuster\": \"unknown-desk-adjuster\"\n\t},\n\t\"policySummary\": {\n\t\t\"policyNumber\": \"{{policy_number}}\",\n\t\t\"insured\": {\n\t\t\t\"firstName\": \"Roger\",\n\t\t\t\"lastName\": \"Dodger\",\n\t\t\t\"kind\": \"InsuredIndividual\"\n\t\t},\n\t\t\"riskAddress\": {\n\t\t\t\"street\": \"367 Burnt Pine Dr\",\n\t\t\t\"city\": \"Naples\",\n\t\t\t\"state\": \"FL\",\n\t\t\t\"zip\": \"34119\"\n\t\t},\n\t\t\"inceptionDate\": \"2012-01-01\",\n\t\t\"effectiveDate\": \"2012-01-01\",\n\t\t\"expirationDate\": \"2015-01-01\",\n\t\t\"policyForm\": \"HO3\"\n\t},\n\t\"estimatingPlatformAssignment\": {\n\t\t\"assigneeId\": \"3985900\",\n\t\t\"recipientsXNAddress\": \"SECURITYFIRST.HOME.WEB\",\n\t\t\"assignmentType\": \"AdjustingFirm\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{binding_xact_url}}/api/claim-assignments",
+							"host": [
+								"{{binding_xact_url}}"
+							],
+							"path": [
+								"api",
+								"claim-assignments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

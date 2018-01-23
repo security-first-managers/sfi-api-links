@@ -1,0 +1,123 @@
+{
+	"info": {
+		"name": "test-binding-xact-verification",
+		"_postman_id": "3b1d92ea-408b-f3e0-f48d-5d8cb8786246",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Verification",
+			"description": "",
+			"item": [
+				{
+					"name": "aws-prod",
+					"item": [
+						{
+							"name": "Get status",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Status is equal to 'Healthy'\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.status.service).to.eql(\"Healthy\");",
+											"});",
+											"",
+											"pm.test(\"Environment is equal to value of node_env variable\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.environment).to.eql(pm.environment.get(\"node_env\"));",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{binding_xact_url}}/status",
+									"host": [
+										"{{binding_xact_url}}"
+									],
+									"path": [
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "aws-dev",
+					"item": [
+						{
+							"name": "Get status",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Status is equal to 'Healthy'\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.status.service).to.eql(\"Healthy\");",
+											"});",
+											"",
+											"pm.test(\"Environment is equal to value of node_env variable\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.environment).to.eql(pm.environment.get(\"node_env\"));",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{binding_xact_url}}/status",
+									"host": [
+										"{{binding_xact_url}}"
+									],
+									"path": [
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "disabled_tests",
+			"description": "",
+			"item": []
+		}
+	]
+}

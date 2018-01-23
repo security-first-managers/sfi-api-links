@@ -1,4 +1,5 @@
 # sfi-api-links
+
 Links &amp; Descriptions for SFI APIs
 
 ### Quote V1 API
@@ -7,7 +8,7 @@ The Quote API is Security First Insurance’s programmatic interface for creatin
 
 [https://qa.securityfirstflorida.com/docs/api/quote/v1/](https://qa.securityfirstflorida.com/docs/api/quote/v1/)
 
-[Documentation](https://github.com/security-first-managers/sfi-docs/blob/master/products/instant-quote/quote-api-v1.md)
+[Documentation](docs/quote-api-v1.md)
 
 
 ### Quote V2 API
@@ -16,7 +17,7 @@ The Quotes API is Security First Insurance’s programmatic interface for creati
 
 [https://dev.api.securityfirstflorida.com/docs/v2/quotes](https://dev.api.securityfirstflorida.com/docs/v2/quotes)
 
-[Documentation](https://github.com/security-first-managers/sfi-docs/blob/master/products/instant-quote/quote-api-v2.md)
+[Documentation](docs/quote-api-v2.md)
 
 #### Postman Collections
 
@@ -46,7 +47,8 @@ This API allows the creation of assignment resources in a third-party estimating
 
 #### Postman Collections
 
-[https://github.com/security-first-managers/sfi-msa-binding-xact/tree/master/test/verification/collections](https://github.com/security-first-managers/sfi-msa-binding-xact/tree/master/test/verification/collections)
+* [test-binding-xact-verification-tabular](postman_collections/claim_estimate_batches_v1/test-binding-xact-verification-tabular.postman_collection.json)
+* [test-binding-xact-verification](postman_collections/claim_estimate_batches_v1/test-binding-xact-verification.postman_collection.json)
 
 
 ### FNOL V2 API
