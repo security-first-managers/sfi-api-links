@@ -20,8 +20,8 @@ The Quotes API is Security First Insurance’s programmatic interface for creati
 
 #### Postman Collections
 
-* [2017/12/21 - Get Constrained Values with environment](postman_collections/2017-12-21_getConstrainedValues.postman_collection.json)
-* [2018/01/16 - Quote V2 with environment](postman_collections/2018-01-16_quoteV2WithEnvironment.postman_collection.json)
+* [2017/12/21 - Get Constrained Values with environment](postman_collections/quote_v2/2017-12-21_getConstrainedValues.postman_collection.json)
+* [2018/01/16 - Quote V2 with environment](postman_collections/quote_v2/2018-01-16_quoteV2WithEnvironment.postman_collection.json)
 
 **Note**: These assume that the environment looks like the following:
 * accessKey: <user's AWS access Key>
